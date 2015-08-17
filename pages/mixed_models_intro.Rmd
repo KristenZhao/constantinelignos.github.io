@@ -1,0 +1,212 @@
+---
+title: "An introduction to linear mixed-effects models"
+author: "Constantine Lignos"
+date: "11/19/14"
+output:
+  ioslides_presentation:
+    css: style.css
+    transition: faster
+  slidy_presentation: default
+---
+
+```{r include=FALSE, cache=FALSE}
+library(lme4)
+library(car)
+library(ggplot2)
+```
+
+
+# Background
+
+
+## An example: Sleep study data
+
+### Description
+The average reaction time per day for subjects in a sleep deprivation study. On day 0 the subjects had their normal amount of sleep. Starting that night they were restricted to 3 hours of sleep per night. The observations represent the average reaction time on a series of tests given each day to each subject.
+
+### Format
+A data frame with 180 observations on the following 3 variables:  
+`Reaction`: Average reaction time (ms)  
+`Days`: Number of days of sleep deprivation  
+`Subject`: Subject number on which the observation was made.
+
+
+## How would you analyze this data?
+
+- Plotting doesn't count as analysis!
+- Assume you can't use a mixed-effects model or repeated measures ANOVA.
+- Common approach: average across subjects/days
+
+
+## Summary of data {.smaller}
+```{r, cache=TRUE}
+head(sleepstudy)
+summary(sleepstudy)
+```
+
+
+## All data
+```{r, echo=FALSE, cache=TRUE}
+ggplot(sleepstudy, aes(Days, Reaction)) + geom_point()
+```
+
+
+## Means across days
+
+```{r, echo=FALSE, cache=TRUE}
+sleepstudy.daymean <- aggregate(Reaction ~ Days, sleepstudy, mean)
+ggplot(sleepstudy.daymean, aes(Days, Reaction)) + geom_point() + stat_smooth(method = "loess")
+```
+
+
+## Per-subject effect of days
+```{r, echo=FALSE, cache=TRUE}
+ggplot(sleepstudy, aes(Days, Reaction)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~ Subject)
+```
+What if 308 and 337 are the only ones driving the effect? How do we account for the different effect size across participants?
+
+
+# Defining mixed-effects models
+
+
+## What do mixed-effects models do?
+
+- Allow us to understand the observed variance as a combination of fixed and random effects
+- Typically:
+    - Fixed effect: "predictable" source of variance, if categorical it is possible to exhaust the space of values
+    - Random effect: "random" source of variance, can be thought of as a subdivision of the error term
+- Random effects are grouped by a categorical predictor but can include effects of continuous predictors within each level of the group
+
+
+## When should you use mixed-effects models?
+
+Lots of cases make sense, but here is the common case:
+
+- You have repeated measures
+- You have an unbalanced design, either intentionally (corpus or other uncontrolled study) or less so (limitation of experimental design) so repeated measures ANOVA should not be applied
+
+
+## Fixed and random effects
+
+- "One modeler's random effect is another modeler's fixed effect" (Kevin Wright)
+- `sleepstudy` data set from `lme4`
+    - Days
+    - Subject
+- In general, if you plan for testing for significance of a predictor, it will be a fixed effect
+- Testing for significance of random effects is primarily useful in choosing among potential random effects structures
+
+
+## Formula specification in `lme4`
+
+- Looks very similar to standard linear regression
+- First, consider a simple fixed-effects model:  
+`Reaction ~ 1 + Days`
+- Think of `|` (AKA pipe, bar) as the grouping operator
+- `(1 | x)` means "an intercept for each level of x"
+- `(1 + a | x)` means "an intercept for each level of x and a slope for 'a' for each level of x"
+- Intercepts are implicit so `(a | x) == (1 + a | x)`
+
+
+## Random effects structures
+- Per-subject random intercept: subjects vary in their average speed
+- Per-subject random slope for days: subjects vary in how the number of days affects their reaction time
+
+
+## Formula specification example {.smaller}
+
+```{r, cache=TRUE}
+summary(lm(Reaction ~ 1 + Days, sleepstudy))
+```
+
+
+## Adding a random intercept {.smaller}
+```{r, cache=TRUE, message=F, warning=F}
+summary(lmer(Reaction ~ 1 + Days + (1 | Subject), sleepstudy), correlation = FALSE)
+```
+
+
+## Adding a random slope {.smaller}
+```{r, cache=TRUE, message=F, warning=F}
+summary(lmer(Reaction ~ 1 + Days + (Days | Subject), sleepstudy), correlation = FALSE)
+```
+
+
+## Some rules of thumb
+- To be a random grouping factor, something should have 5 or more levels
+    - Why? Difficult to estimate variance reasonably with fewer levels
+    - Example: How would you model suffix effects in a corpus where number of suffixes in the data is 3? How about 30?
+
+
+# Examining fits
+
+
+## Interpreting results
+- Coefficients and standard errors are just like a fixed-effects model
+- Rule of thumb for t-values: with infinite data, $t = \pm 1.96 \rightarrow p = 0.05$
+- The best way to test for significance is to do an explicit model comparison
+- For testing significance, the Chi-square log likelihood ratio test is your best bet
+    - This applies as well for `glmer` fits, even though they print p-values in the summary
+
+
+## Maximum likelihood
+- When planning to compare models, pass the argument `REML = FALSE` to ensure the model is fit using a maximum likelihood criterion
+- Maximum likelihood fit = the best combination of parameters *that could be found* for explaining the data, without imposing any prior on what the parameters should look like
+
+
+## Significance testing
+Test the significance of number of days:
+```{r, cache=TRUE}
+fm1 <- lmer(Reaction ~ 1 + (Days | Subject), sleepstudy, REML = FALSE)
+fm2 <- lmer(Reaction ~ 1 + Days + (Days | Subject), sleepstudy, REML = FALSE)
+anova(fm1, fm2)
+```
+
+
+## Significance testing
+For convenience, you can test all fixed effects by using `drop1`:
+```{r, cache=TRUE}
+drop1(fm2, test = "Chisq")
+```
+
+
+## Verifying that the random slopes are meaningful
+```{r, cache=TRUE}
+fm3 <- lmer(Reaction ~ 1 + Days + (1 | Subject), sleepstudy, REML = FALSE)
+anova(fm2, fm3)
+```
+This is primarily for diagnosing model structure problems; it's unusual to report significance for a random effect term.
+
+
+## Convergence issues
+
+- Fitting a model of this type relies on optimization
+- There is no guarantee that your model is the "best fit" or that a unique best fit even exists
+- Things that affect convergence success and speed:
+    - Centering *and standardizing* predictors, especially if they will be used as a random slope
+    - If you're technically inclined, see `?nloptwrap` and used the `nlopt` implementation of BOBYQA
+- What do you do if your model won't converge?
+    - Look for high level of missingness in your data
+    - Plot effects by your grouping factor to see if something stands out
+    - If all else fails, try a simpler model
+
+
+## The great random slope debate {.smaller}
+- Barr et al. (2013) have argued for a "keep it maximal" strategy: essentially, put all the fixed effects you can into random slopes as well
+- This is a good idea, but a lot of people make mistakes blindly following this:
+    - Make sure each fixed effect actually varies by the grouping factor. If you are exploring gender effects and  participants remain the same gender during the experiment, `(gender | Subject)` is not meaningful.
+    - Multiple random slopes per grouping factor are difficult to estimate. For example, if your fixed effects are `A * B + C`, it is asking a lot from the model to estimate those terms per-subject.
+- Always check for correlations of $\pm 1$ among your random effects
+- Douglas Bates (one of the creators of `lme4`) has discussed some of the issues in following a "keep it maximal" maxim, namely the fact that it [often leads to singular models](https://stat.ethz.ch/pipermail/r-sig-mixed-models/2014q4/022729.html)
+
+
+## Further reading {.smaller}
+- Winter, B. (2013). Linear models and linear mixed effects models in R with linguistic applications. arXiv:1308.5499. (http://arxiv.org/pdf/1308.5499.pdf)
+- Useful posts by lme4 developers Douglas Bates and Ben Bolker
+    - On p-values: [lmer, p-values and all that](https://stat.ethz.ch/pipermail/r-help/2006-May/094765.html)
+    - More on the difficulty of computing denominator degrees of freedom: [residual df in lmer and simulation results](https://stat.ethz.ch/pipermail/r-help/2006-July/110133.html)
+    - The conservativity of testing for random effect significance: [testing for significance in random-effect factors using lmer](https://stat.ethz.ch/pipermail/r-help/2005-July/075346.html)
+    - Interpreting log-likelihood ratio tests: [Interpretation of lmer output in R](https://stat.ethz.ch/pipermail/r-sig-mixed-models/2011q1/015608.html)
+    - When to drop non-significant or poorly estimated model terms: [lmer and p-values](https://stat.ethz.ch/pipermail/r-sig-mixed-models/2011q1/015958.html)
+
+## Thanks!
+- Questions?

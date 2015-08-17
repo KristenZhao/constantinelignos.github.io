@@ -1,0 +1,21 @@
+---
+layout: default
+title: Talks
+---
+<div id="publications">
+<h1>Presentations and posters</h1>
+{% for entry in site.data.presentations %}
+<p>
+  {% if entry.link %}
+    <a href={{ entry.link }}>
+  {% endif %}
+    <b>{{ entry.title }}</b>
+  {% if entry.link %}
+    </a>
+  {% endif %}
+    <br />
+    {{ entry.authors }}<br />
+    {{ entry.info }}
+</p>
+{% endfor %}
+</div>

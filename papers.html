@@ -1,0 +1,24 @@
+---
+layout: default
+title: Papers
+---
+<div id="publications">
+<h1>Papers</h1>
+{% for entry in site.data.papers %}
+<p>
+  {% if entry.link %}
+    <a href={{ entry.link }}>
+  {% endif %}
+    <b>{{ entry.title }}</b>
+  {% if entry.link %}
+    </a>
+  {% endif %}
+  {% if entry.official %}
+    &nbsp;(<a href={{ entry.official }}>journal link</a>)
+  {% endif %}
+    <br />
+    {{ entry.authors }}<br />
+    <em>{{ entry.booktitle }}</em>, {{ entry.info }}
+</p>
+{% endfor %}
+</div>

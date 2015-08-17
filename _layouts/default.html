@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Constantine Lignos - {{ page.title }}</title>
+    <meta name="google-site-verification" content="MrK4ikjP_lp-PjK--oem1iq30uVRvHPH70CLyLtEWog" />
+    <meta name="description" content="Research site for Constantine Lignos, Children's Hospital of Philadelphia" />
+    <meta name="keywords" content="Constantine Lignos, Children's Hospital of Philadelphia, Computer Science, Linguistics, Language Acquisition, Unsupervised Learning, Morphology, Word Segmentation, Natural Language Processing, Language Variation"/>
+    <meta name="viewport" content="width=device-width"/>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css"/>
+  </head>
+  <body>
+  <div class="menu">
+    <ul>
+      <li><a href="." class="name"><b>Constantine Lignos</b></a></li>
+      <li></li>
+      <li></li>
+      <li{% if page.title == "Research" %} class="active"{% endif %}><a href="/">Home</a></li>
+      <li{% if page.title == "Papers" %} class="active"{% endif %}><a href="/papers.html">Papers</a></li>
+      <li{% if page.title == "Talks" %} class="active"{% endif %}><a href="/talks.html">Talks</a></li>
+      <li{% if page.title == "Posts" %} class="active"{% endif %}><a href="/posts.html">Posts</a></li>
+      <li{% if page.title == "About" %} class="active"{% endif %}><a href="/about.html">About</a></li>
+    </ul>
+  </div>
+    <div id="container">
+      <div id="content">
+{{ content }}
+      </div>
+   </div>
+   {% if site.analytics %}
+     {% include analytics.html %}
+   {% else %}
+     <!-- Analytics disabled -->
+   {% endif %}
+  </body>
+</html>

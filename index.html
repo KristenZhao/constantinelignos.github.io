@@ -1,0 +1,176 @@
+---
+layout: default
+title: Research
+---
+<br />
+<table style="width:100%;cellspacing:5;border:0">
+  <tr>
+    <td><div><img src="lignos-photo.jpg" alt="portrait" id="portrait"/></div></td>
+    <td>
+      <p><strong>Constantine Lignos</strong></p>
+      <p><strong>Email:</strong> <a href="http://www.google.com/recaptcha/mailhide/d?k=01C_qaSsNKYhJ82D1_MKjrVw==&amp;c=dZEXcCBZMQu0XCCLrgOHa8eksLZx5mwjt0q0UF_l8TY=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501C_qaSsNKYhJ82D1_MKjrVw\75\75\46c\75dZEXcCBZMQu0XCCLrgOHa8eksLZx5mwjt0q0UF_l8TY\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...</a>@lignos.org</p>
+      <p><strong>Details:</strong> <a
+      href="https://github.com/ConstantineLignos">ConstantineLignos on
+      Github</a>, <a
+      href="https://twitter.com/ConstantineLig">@ConstantineLig</a>, <a href="https://www.researchgate.net/profile/Constantine_Lignos">ResearchGate</a></p>
+
+      <p>My research explores the computational structure of language
+      from a fundamentally interdisciplinary perspective. I work on <a
+      href="#projects">projects in many domains</a>, including
+      traditional natural language processing, human language
+      acquisition and processing, and language variation and change. I
+      create simple, interpretable computational models by taking
+      advantage of findings from theoretical linguistics,
+      psycholinguistics, and language acquisition.</p>
+
+      <p>I did my graduate work in Computer Science at The University
+      of Pennsylvania (Ph.D. 2013), advised by <a
+      href="http://www.cis.upenn.edu/~mitch/">Mitch Marcus</a> and <a
+      href="http://www.ling.upenn.edu/~ycharles/">Charles Yang</a>. I
+      then completed a post-doctoral fellowship at The Children's
+      Hospital of Philadelphia exploring clinical applications of
+      statisical models of language processing, working with <a
+      href="http://www.research.chop.edu/programs/car/our_team/details/?cat=1&amp;id=5">Tim
+      Roberts</a>. Frequent collaborators include <a
+      href="https://sites.google.com/site/jonrbrennan/">Jonathan
+      Brennan</a>, <a href="http://www.csee.ogi.edu/~gormanky/">Kyle
+      Gorman</a>, <a
+      href="http://personalpages.manchester.ac.uk/staff/laurel.mackenzie/">Laurel
+      MacKenzie</a>, <a
+      href="http://www.ling.upenn.edu/~hilaryp/">Hilary Prichard</a>, and <a
+      href="http://users.cms.caltech.edu/~vasu/">Vasu Raman</a>.</p>
+
+    </td>
+  </tr>
+</table>
+
+<hr />
+
+<h1>Latest news</h1>
+
+{% for post in site.posts limit:3 %}
+<h3>{{ post.title }}</h3>
+{{ post.content }}
+{% endfor %}
+
+<hr />
+
+<h1 id="projects">Projects</h1>
+
+<h3>Unsupervised word and morpheme learning and child language
+acquisition</h3>
+
+<p><em>Representative publication</em>: <a
+href="http://www.lingref.com/cpp/wccfl/30/paper2821.pdf">Infant
+word segmentation: An incremental, integrated model</a><br />
+
+In the first years of life, children learn to segment the speech
+stream into words and the morphemes they are built from. This problem
+is similar to the NLP task of unsupervised
+language learning, and my research in this area develops learning
+methods that are computationally efficient, cognitively plausible, and
+predict the ways in which infants learn over time.</p>
+
+<h3>Lexical and morphological processing</h3>
+
+<p><em>Representative publication</em>: <a
+href="papers/Lignos-Gorman-Frequency-CLS48.pdf">Revisiting frequency
+and storage in morphological processing</a><br />
+
+I use computational modeling to extend experimental work by
+evaluating theories of processing morphologically complex words using
+large scale data. My work focuses on the debate surrounding the role
+of frequency in facilitating processing and the nature of
+morphological decomposition.</p>
+
+<h3>Codeswitching</h3>
+<p><em>Representative poster</em>: <a
+href="talks/Lignos-Marcus_Codeswitching_Poster_LSA2013.pdf">Toward
+web-scale analysis of codeswitching</a><br />
+
+Multilinguals are capable of mixing the languages they speak a process
+known as codeswitching. Codeswitching poses a problem for traditional
+NLP models, which typically assume that entire
+documents contain a single language and perform poorly when asked to
+identify the language of a short message such as a tweet, let alone
+individual words. My research in this area focuses on using linguistic
+insights to build simple, high-performance systems for identifying
+codeswitching in short forms such as social media, enabling both NLP
+applications and sociolinguistic research. I've used crowdsourced
+annotation to create a corpus of codeswitched tweets and am developing
+<a href="#codeswitchador">Codeswitchador</a>, a software package for
+language identification and codeswitching.</p>
+
+<h3>Language variation and change</h3>
+
+<p><em>Representative poster</em>: <a
+href="talks/Lignos-MacKenzie_Contraction_LSA2014.pdf">Examining
+extragrammatical effects on English auxiliary contraction</a><br />
+
+While we can often describe <em>what</em> changes in language, we are
+rarely able to explain <em>how</em> these changes occur. I develop
+computational models that provide and test explicit mechanisms of how
+successive generations of language acquisition can lead to change. I
+also study the language processing mechanisms that support language
+variation, modeling variation in linguistic corpora.</p>
+
+<h3>Human-robot interaction</h3>
+
+<p><em>Representative publication</em>: <a
+href="papers/Lignos_etal-AURO-Provably_correct_control.pdf">Provably
+correct reactive control from natural language</a><br />
+
+In situations like search and rescue, we need robots to perform
+complicated tasks under limited supervision, a natural application for
+giving commands via natural language. As a part of the <a
+href="http://www.seas.upenn.edu/~muri/index.html">SUBTLE MURI</a>
+project, I created <a
+href="https://github.com/PennNLP/SLURP">SLURP</a>, a system that
+allows users to specify simple tasks for a robot to perform using
+natural language by translating their instructions into a satisfiable
+linear temporal logic specification.</p>
+
+<hr />
+
+<h1>Software</h1>
+
+<p><a href="https://github.com/ConstantineLignos/MORSEL">MORSEL</a>: a
+cognitively-motivated state-of-the-art unsupervised morphological
+analyzer I developed for Morpho Challenge 2010. It achieved
+state-of-the-art results in English and Finnish.</p>
+
+<p><a href="https://github.com/ConstantineLignos/Codeswitchador"
+id="codeswitchador"><em>Codeswitchador</em></a>: a system for
+identifying code-switching in social media data. This work enables the
+creation of large scale corpora of code-switching and identification
+of bilingual users.  I developed this as a participant of the <a
+href="http://hltcoe.jhu.edu/research/scale-workshops/">SCALE
+summer workshop</a> at the <a href="http://hltcoe.jhu.edu/">Johns
+Hopkins Center of Excellence in Human Language Technology</a>.</p>
+
+<p>I'm working to release the code and data I've used for other
+papers. E-mail me if you need anything in particular in the
+meantime. Even if it isn't formally released, almost everything I work
+on is <a href="https://github.com/ConstantineLignos/">publicly
+available on GitHub</a>.</p>
+
+<hr />
+
+<h1>Teaching</h1>
+
+<p>I teach researchers to write great Python code. The notes for the
+bootcamps I've done are available at <a
+ href="http://pybootcamp.com">Python Boot Camp for
+Researchers</a>.</p>
+
+<p>I maintain a list of common mistakes that programmers new to Python
+make: <a href="py_antipatterns">Anti-Patterns in Python
+Coding</a>.</p>
+
+<p>In Spring 2011 and 2012, I taught one of the CIS department's
+&quot;mini-courses,&quot; Python Programming (CIS 192).</p>
+
+<p>In the past I've also led some informal groups for learning
+Python. The slides from those groups can be found on my <a
+href="http://sites.google.com/site/pylangresearch/">Python for
+Language Researchers Site</a>.</p>

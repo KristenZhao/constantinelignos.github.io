@@ -1,0 +1,99 @@
+- title: Morphology and language acquisition
+  authors: Constantine Lignos, Charles Yang
+  booktitle: Cambridge Handbook of Morphology
+  info: chapter 28. Andrew Hippisley and Gregory T. Stump (Eds.). To appear.
+  link: papers/Lignos_Yang-Morphology_acquisition-2015.pdf
+
+- title: Provably correct reactive control from natural language
+  authors: Constantine Lignos, Vasumathi Raman, Cameron Finucane, Mitchell Marcus, Hadas Kress-Gazit
+  booktitle: Autonomous Robots
+  info: 38 (1), 89-105. 2015
+  link: papers/Lignos_etal-AURO-Provably_correct_control.pdf
+  official: http://link.springer.com/article/10.1007/s10514-014-9418-8
+
+- title: Spectro-temporal correlates of lexical access during auditory lexical decision
+  authors: Jonathan Brennan, Constantine Lignos, David Embick, and Timothy P.L. Roberts
+  booktitle: Brain and Language
+  info: 133, 39-46. 2014
+  link: "http://www.sciencedirect.com/science/article/pii/S0093934X14000443"
+
+- title: "Sorry Dave, I'm afraid I can't do that: Explaining unachievable robot tasks using natural language"
+  authors: Vasumathi Raman, Constantine Lignos, Cameron Finucane, Kenton CT Lee, Mitchell P. Marcus, and Hadas Kress-Gazit
+  booktitle: "Proceedings of Robotics: Science and Systems IX"
+  info: 2013
+  link: "http://www.roboticsproceedings.org/rss09/p23.pdf"
+
+- title: "Make it so: Continuous, flexible natural language interaction with an autonomous robot"
+  authors: Daniel J. Brooks, Constantine Lignos, Cameron Finucane, Mikhail S. Medvedev, Ian Perera, Vasumathi Raman, Hadas Kress-Gazit, Mitchell P.  Marcus, Holly A Yanco.
+  booktitle: Proccedings of the Grounding Language for Physical Systems Workshop at the Twenty-Sixth
+    AAAI Conference on Artificial Intelligence
+  info: 2012
+  link: "http://www.aaai.org/ocs/index.php/WS/AAAIW12/paper/view/5244"
+
+- title: Revisiting frequency and storage in morphological processing
+  authors: Constantine Lignos and Kyle Gorman
+  booktitle: Proceedings of the 48th Annual Meeting of the Chicago Linguistic Society
+  info: 447-461, 2014. (This article was submitted in November 2012, but proceedings were not officially published until 2014.)
+  link: papers/Lignos-Gorman-Frequency-CLS48.pdf
+
+- title: "Infant word segmentation: An incremental, integrated model"
+  authors: Constantine Lignos
+  booktitle: Proceedings of the West Coast Conference on Formal Linguistics 30
+  info: 2012
+  link: "http://www.lingref.com/cpp/wccfl/30/paper2821.pdf"
+
+- title: "You can't get there from here: On interpreting learning experiments"
+  authors: Constantine Lignos
+  booktitle: Proceedings of Penn Linguistics Colloquium 36
+  info: 2012
+  link: papers/Lignos-Learning-Experiments-PLC36.pdf
+
+- title: Modeling infant word segmentation
+  authors: Constantine Lignos
+  booktitle: Proceedings of the Fifteenth Conference on Computational Natural Language Learning
+  info: 29-38. 2011
+  link: "http://www.aclweb.org/anthology/W11-0304.pdf"
+
+- title: Learning from unseen data
+  authors: Constantine Lignos
+  booktitle: Proceedings of the Morpho Challenge 2010 Workshop
+  info: 35-38. 2010
+  link: papers/mc_2010_lignos.pdf
+
+- title: "Recession segmentation: Simpler online word segmentation using limited resources"
+  authors: Constantine Lignos and Charles Yang
+  booktitle: Proceedings of the Fourteenth Conference on Computational Natural Language Learning
+  info: 88-97. 2010
+  link: "http://www.aclweb.org/anthology/W10-2912.pdf"
+
+- title: Investigating the relationship between linguistic representation and computation through an unsupervised model of human morphology learning
+  authors: Erwin Chan and Constantine Lignos
+  booktitle: Research on Language and Computation
+  info: 8 (2), 209-238. 2010
+  link: papers/Chan_Lignos-ROLC-Unsupervised_morphology.pdf
+  official: http://dx.doi.org/10.1007/s11168-011-9077-2
+
+- title: Evidence for a morphological acquisition model from development data
+  authors: Constantine Lignos, Erwin Chan, Charles Yang, and Mitchell P. Marcus
+  booktitle: Proceedings of the 34th Annual Boston University Conference on Language Development
+  info: 2, 269-280. 2010
+  link: papers/bucld34_lignos.pdf
+
+- title: A rule-based acquisition model adapted for morphological analysis
+  authors: Constantine Lignos, Erwin Chan, Mitchell P. Marcus, and Charles Yang
+  booktitle: Multilingual Information Access Evaluation I. Text Retrieval Experiments. Lecture Notes in Computer Science
+  info: 6241, 658-665. 2010
+  link: papers/Lignos_CLEF-Proceedings_2009.pdf
+  official: http://doi.org/10.1007/978-3-642-15754-7_79
+
+- title: A rule-based unsupervised morphology learning framework
+  authors: Constantine Lignos, Erwin Chan, Mitchell P. Marcus, and Charles Yang
+  booktitle: Working Notes of the 10th Workshop of the Cross-Language Evaluation Forum (CLEF)
+  info: 2009
+  link: papers/Lignos_etal_MC2009.pdf
+
+- title: Effects of head movement on perceptions of humanoid robot behavior
+  authors: Emily Wang, Constantine Lignos, Ashish Vatsal, and Brian Scassellati
+  booktitle: "HRI '06: Proceedings of the 1st ACM SIGCHI/SIGART Conference on Human-Robot Interaction"
+  info: 180-185, 2006
+  link: papers/Wang-Lignos-Vatsal-Scassellati_HRI06.pdf

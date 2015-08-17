@@ -1,0 +1,80 @@
+/* Body */
+body {
+    font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+#container {
+    padding: 1px;
+    width: 90%;
+    margin: auto;
+}
+
+#content {
+}
+
+img {
+    border: none;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    padding: 3px 0 3px 0;
+}
+
+#publications {
+}
+
+#publications li{ 
+    padding: 5px 0 5px 0;
+}
+
+/* Navigation */
+#header {
+}
+
+#menu {
+}
+
+#menu ul {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+    list-style: none;
+    line-height: normal;
+    background-color: #202020;
+    float: left;
+}
+
+#menu li {
+    display: inline;
+    text-align: center;
+    padding: 0 0 0 20px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+#menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    color: #FFFFBB;
+}
+
+#menu .active a {
+    color: #FFFFBB;
+}

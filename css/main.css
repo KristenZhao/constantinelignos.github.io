@@ -1,0 +1,154 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Body */
+body {
+    font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+h3, h4, h5, h6 {
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+
+#container {
+    padding: 1px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#content {
+}
+
+img {
+    border: none;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+img#portrait {
+    margin: 10px 25px 10px 0;
+    max-width: none;
+}
+
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    padding: 3px 0 3px 0;
+}
+
+p {
+    margin-top: 5px;
+}
+
+#publications {
+}
+
+#publications li{ 
+    padding: 5px 0 5px 0;
+}
+
+/* Navigation */
+.menu {
+}
+
+.menu ul {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+    list-style: none;
+    line-height: normal;
+    background-color: #202020;
+    float: left;
+}
+
+.menu li {
+    display: inline;
+    text-align: center;
+    padding: 0 0 0 20px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #FFFFBB;
+}
+
+.menu .active a {
+    color: #FFFFBB;
+}
+
+a.name {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a.name:hover {
+    color: #FFFFFF;
+}
+
+table.topalign tr {
+    vertical-align: top;
+}
+
+table.topalign td {
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+table.data {
+    text-align: left;
+}
+
+table.data td {
+    padding: 1px 5px 1px 0px;
+}
+
+
+/*****************************************************************************/
+/*
+/* Pages
+/*
+/*****************************************************************************/
+
+.titleblock {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.titleblock h1{
+    margin: 0;
+}
+
+.titleblock h3 {
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 3px;
+}

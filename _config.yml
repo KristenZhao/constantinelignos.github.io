@@ -1,0 +1,7 @@
+name: Constantine Lignos - Research
+markdown: redcarpet
+safe: true
+lsi: false
+highlighter: pygments
+relative_permalinks: false
+analytics: true
