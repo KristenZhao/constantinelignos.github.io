@@ -269,7 +269,7 @@ let's say you want to return the index of an item in a list:
 
 {% highlight python %}
 def find_item(item, alist):
-    # None is arguably more Python than -1
+    # None is arguably more Pythonic than -1
     result = -1
     for idx, other_item in enumerate(alist):
         if other_item == item:
