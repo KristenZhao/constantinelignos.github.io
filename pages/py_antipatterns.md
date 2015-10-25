@@ -39,6 +39,7 @@ the [license](#license) allows, feel free to get in touch with me
 ---
 
 # Iteration
+
 ## The use of `range`
 Programmers that are new to Python love using `range` to
   perform simple iteration by applying it over the length of an
@@ -185,6 +186,7 @@ not use a list comprehension at all.
 ---
 
 # Performance Pitfalls
+
 ## Checking for contents in linear time
 Syntactically, checking if something is contained in a list or a set/dictionary look alike, 
 but under the hood things are different. If you need to repeatedly check whether something is contained 

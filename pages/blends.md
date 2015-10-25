@@ -16,7 +16,7 @@ summary: >
 
 <div class="titleblock">
   <h1>{{ page.title }}</h1>
-  <h3><a href="..">Constantine Lignos</a> and <a href="http://www.ling.upenn.edu/~hilaryp/">Hilary Prichard</a>| Last updated: {{ page.date | date: '%B %d, %Y' }}</h3>
+  <h3><a href="..">Constantine Lignos</a> and <a href="http://www.ling.upenn.edu/~hilaryp/">Hilary Prichard</a> | Last updated: {{ page.date | date: '%B %d, %Y' }}</h3>
   </div>
 
 # Coverage

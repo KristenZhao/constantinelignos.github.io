@@ -1,5 +1,6 @@
 name: Constantine Lignos - Research
-markdown: redcarpet
+markdown: kramdown
+encoding: UTF-8
 safe: true
 lsi: false
 highlighter: pygments
