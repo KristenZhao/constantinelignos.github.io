@@ -3,6 +3,10 @@ layout: bare
 title: Writing your first program - Python Bootcamp
 analytics: pytbootcamp
 ---
+<div class="titleblock">
+  <h1>{{ page.title }}</h1>
+  <h3><a href="..">Constantine Lignos</a></h3>
+</div>
 
 # Contents
 {:.no_toc}

@@ -1,8 +1,12 @@
 ---
 layout: bare
-title: Python Bootcamp Home
+title: Home - Python Bootcamp for Researchers
 analytics: pytbootcamp
 ---
+<div class="titleblock">
+  <h1>{{ page.title }}</h1>
+  <h3><a href="..">Constantine Lignos</a></h3>
+</div>
 
 # Tutorials
 
