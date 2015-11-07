@@ -1,7 +1,7 @@
 ---
 layout: bare
 title: Home - Python Bootcamp for Researchers
-analytics: pytbootcamp
+analytics: pybootcamp
 ---
 <div class="titleblock">
   <h1>{{ page.title }}</h1>

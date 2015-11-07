@@ -1,7 +1,7 @@
 ---
 layout: bare
 title: Basic data structures - Python Bootcamp
-analytics: pytbootcamp
+analytics: pybootcamp
 ---
 <div class="titleblock">
   <h1>{{ page.title }}</h1>
