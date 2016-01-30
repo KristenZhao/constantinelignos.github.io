@@ -18,7 +18,7 @@ analytics: pybootcamp
 We'll work with a data set that is a count of how often each word
 appeared in a 1 million-word corpus of American English text called
 the Brown corpus. Download [this
-wordlist](../examples/brown_wordlist.txt). Each line has a frequency
+wordlist](examples/brown_wordlist.txt). Each line has a frequency
 and a word separated by a space, so you can extract them by calling
 `split` on the line after you call `rstrip`. Each word appears only
 once.
@@ -60,7 +60,7 @@ letter computed in this fashion over the wordlist.
 ## Solution
 
 For an example solution, look at
-[read_wordlist.py](../examples/read_wordlist.py).
+[read_wordlist.py](examples/read_wordlist.py).
 
 
 # Extensions
@@ -81,9 +81,9 @@ If you've made it this far, nice work!
 
 Now it's time to make your own wordlist. Assume you have a file that's
 a [tokenized version of chapters 1-2 of _Pride and
-Prejudice_](../examples/pp_ch1-2_tokenized.txt). Write a program that
+Prejudice_](examples/pp_ch1-2_tokenized.txt). Write a program that
 will produce a wordlist from it. The output should look like [this
-wordlist](../examples/pp_ch1-2_wordlist.txt).
+wordlist](examples/pp_ch1-2_wordlist.txt).
 
 For an example solution, look at
-[make_wordlist.py](../examples/make_wordlist.py).
+[make_wordlist.py](examples/make_wordlist.py).

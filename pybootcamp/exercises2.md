@@ -18,7 +18,7 @@ analytics: pybootcamp
 Skills used: CSV reading, basic math, dealing with data
 
 Your task is to write a program that summarizes the data contained in
-[presidents.csv](../examples/presidents.csv). This contains data from
+[presidents.csv](examples/presidents.csv). This contains data from
 the `presidents` dataset in R, quarterly approval ratings of US
 presidents. Your program `avg_ratings.py` should take two filenames as
 command-line arguments: the CSV file to read (`presidents.csv`) and
@@ -50,7 +50,7 @@ year,mean,median
 </pre>
 
 An example solution is available in
-[avg_ratings.py](../examples/avg_ratings.py).
+[avg_ratings.py](examples/avg_ratings.py).
 
 # Employee database
 
@@ -58,7 +58,7 @@ Skills used: Listing directory contents, classes, string parsing
 
 Your task is to write a program that aggregates data spread across a
 number of files. Start by downloading the file
-[employee_info.zip](../examples/employee_info.zip) and unzipping it to
+[employee_info.zip](examples/employee_info.zip) and unzipping it to
 create a folder named `employee_info`.
 
 In this folder, there's a set of files of the format `<employee id>.txt`
@@ -111,7 +111,7 @@ If you notice that you are only extracting the first name, you are
 probably using `split` incorrectly.
 
 An example solution is available in
-[employee_info.py](../examples/employee_info.py).
+[employee_info.py](examples/employee_info.py).
 
 
 # On your own

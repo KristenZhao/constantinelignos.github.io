@@ -19,7 +19,7 @@ Parsing `sys.argv` yourself can be quite a pain. If your program takes
 more than one or two fixed arguments, it can be very handy to use
 [argparse](http://docs.python.org/2.7/library/argparse.html), which
 does all the hard work for you. Take a look at the [concordance
-example](../examples/concordance.py) to see this in use.
+example](examples/concordance.py) to see this in use.
 
 # Collections
 

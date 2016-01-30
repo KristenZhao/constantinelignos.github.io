@@ -34,7 +34,7 @@ adds a wait to count the total.
 
 For now, let's consider a class whose goal it is to count upwards from
 zero and reset the count if requested. This class is contained in
-[counter.py](../examples/counter.py).
+[counter.py](examples/counter.py).
 
 {% highlight python %}
 class Counter(object):
@@ -110,7 +110,7 @@ documentation](http://docs.python.org/2/reference/datamodel.html).
 
 Here's an example of overriding `__setitem__` to allow a dictionary to
 track the sum over all its values. You can download the full example,
-[totaldict.py](../examples/totaldict.py).
+[totaldict.py](examples/totaldict.py).
 
 {% highlight python %}
 class TotalDict(dict):

@@ -40,7 +40,7 @@ Run:
 1. [make_wordlist](examples/make_wordlist.py): Create a
 frequency-sorted wordlist from a tokenized text file. Use the
 [tokenized version of chapters 1-2 of _Pride and
-Prejudice_](../examples/pp_ch1-2_tokenized.txt) as input.
+Prejudice_](examples/pp_ch1-2_tokenized.txt) as input.
 Run:  
 `python make_wordlist.py pp_ch1-2_tokenized.txt > wordlist.txt`
 1. [totaldict](examples/totaldict.py): Demonstrates inheritance from a

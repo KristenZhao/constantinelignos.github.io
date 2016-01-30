@@ -30,7 +30,7 @@ of a good fortune must be in want of a wife
 </pre>
 
 The data comes from a [tokenized version of chapters 1-2 of _Pride and
-Prejudice_](../examples/pp_ch1-2_tokenized.txt). We may want to
+Prejudice_](examples/pp_ch1-2_tokenized.txt). We may want to
 transform this into a list of the individual words:
 
 {% highlight python %}
@@ -192,7 +192,7 @@ difference at all between `items` and `iteritems` much of the time.
 
 Your goal is to create a dictionary that maps words to their
 frequencies, similar to the contents of the [Brown corpus
-wordlist](../examples/brown_wordlist.txt) that we worked with
+wordlist](examples/brown_wordlist.txt) that we worked with
 before.
 
 Your file `count_words.py` will take filenames as command-line
@@ -212,8 +212,8 @@ the previous function.
 To show that the counts are correct, you should call get the 10 most
 common words using the `most_common` method on the counter and print
 each word and its count. When run on the input files
-[pp_ch1_tokenized.txt](../examples/pp_ch1_tokenized.txt) and
-[pp_ch2_tokenized.txt](../examples/pp_ch2_tokenized.txt),
+[pp_ch1_tokenized.txt](examples/pp_ch1_tokenized.txt) and
+[pp_ch2_tokenized.txt](examples/pp_ch2_tokenized.txt),
 the output should look like the following:
 
 <pre>
@@ -231,7 +231,7 @@ $ python count_words.py pp_ch1_tokenized.txt pp_ch2_tokenized.txt
 </pre>
 
 An example solution can be found in
-[count_words.py](../examples/count_words.py).
+[count_words.py](examples/count_words.py).
 
 ## Normalized frequencies
 

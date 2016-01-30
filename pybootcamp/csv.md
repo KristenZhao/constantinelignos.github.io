@@ -75,7 +75,7 @@ pandas](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.parsers.
 
 Here are some exercises to get you used to working with the CSV
 module. Try these out using a [sample CSV
-file](../examples/csv_data.csv).
+file](examples/csv_data.csv).
 
 1. Write a function that reads a CSV and uses a `defaultdict` to store
 a list of the values for each item as it reads in the CSV. Use

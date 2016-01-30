@@ -112,7 +112,7 @@ printed:
 
 One of the most common things we need to do is read data from
 files. To open a file, simply use `open`. For now, let's work with the
-[the first chapter of _Pride and Prejudice_](../examples/pp_ch1.txt).
+[the first chapter of _Pride and Prejudice_](examples/pp_ch1.txt).
 
 To open it, after downloading it do the following:
 {% highlight python %}
@@ -248,11 +248,11 @@ way to do this is to do something like the following, which will be
 explained soon:  
 `filenames = sys.argv[1:]`
 
-You can use the [first](../examples/pp_ch1.txt) and
-[second](../examples/pp_ch2.txt) chapters of _Pride and Prejudice_ as
+You can use the [first](examples/pp_ch1.txt) and
+[second](examples/pp_ch2.txt) chapters of _Pride and Prejudice_ as
 files to concatenate.
 
-When you're done, take a look at [cat.py](../examples/cat.py) which
+When you're done, take a look at [cat.py](examples/cat.py) which
 provides a solution.
 
 If you want to write another simple program, write one that counts the
