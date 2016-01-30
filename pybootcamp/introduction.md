@@ -28,10 +28,11 @@ and powerful packages in the standard library.
 
 # Some challenges in dealing with Python
 
-1. “Variables” as you know it don’t exist. The _names_ that
-replace them take some getting used to.
-1. The compiler will not stop you from shooting yourself in the foot
-1. No enforcement of contracts/interfaces
+1. The compiler will not stop you from writing nonsense
+1. The compiler will not stop you from writing code that almost makes
+   sense but is actually wrong
+1. Some errors won't show up unless the actual line of code is run,
+meaning that you have no idea whether anything works until you test it.
 
 # How Python works
 
@@ -39,7 +40,9 @@ replace them take some getting used to.
 1. The syntax tree is turned into _byte code_ which is executed by the
 _interpreter_
 1. Only syntax errors are caught in advance; _runtime_ errors are
-reported as they happen
+reported as they happen. For example, the compiler will tell you if
+you've forgotten a colon, but it won't tell if you're calling
+something on a number that requires a string.
 
 # Some basics
 
