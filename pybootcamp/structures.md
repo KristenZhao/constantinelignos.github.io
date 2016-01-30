@@ -197,6 +197,34 @@ You can fix this by either checking in advance for whether a key is in
 the dictionary or by handling the exception, which we'll talk about
 later.
 
+## Default dictionaries
+
+Sometimes you want to be able to set up a dictionary so that
+everything has a default value. For example, let's assume that you
+want have a dictionary from formal names to nicknames, where each name
+can have multiple nicknames. Also, let's assume that you want to read
+in a file that looks something like this:
+
+    Johnathan John
+    Johnathan Johnny
+    Johnathan Jack
+
+What we want is a dictionary that looks like this, with string keys
+and list values:
+
+    {'Johnathan': ['John', 'Johnny', 'Jack']}
+
+We can accomplish this by using a `defaultdict`, a dictionary that
+comes with a default value for a key we haven't seen before. In this
+case, that default value would be an empty list. We can ask for that
+by doing the following:
+
+    from collections import defaultdict
+    nicknames = defaultdict(list)
+
+*Exercise:* Write a program that populates a default dictionary from a
+ file of nicknames as shown above.
+
 # Strings
 
 Strings are a sequence type, so they can be sliced and iterated over just like a
