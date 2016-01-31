@@ -5,7 +5,11 @@ import sys
 import csv
 from collections import defaultdict
 
+import numpy as np
 
+
+# These implementations of mean and median aren't used in this solution, but
+# provided as an example of a naive implementation.
 def mean(nums):
     """Compute the mean of a series of numbers."""
     return sum(nums) / float(len(nums))
@@ -16,8 +20,7 @@ def median(nums):
     nums = sorted(nums)
     # If odd, just get the middle index
     if len(nums) % 2:
-        # Use int division to round it downward to get the middle
-        # index
+        # Use int division to round it downward to get the middle index
         middle = len(nums) / 2
         return nums[middle]
     else:
@@ -51,7 +54,7 @@ def main():
         writer.writerow(['year', 'mean', 'median'])
         for year in sorted(ratings):
             year_ratings = ratings[year]
-            writer.writerow((year, mean(year_ratings), median(year_ratings)))
+            writer.writerow((year, np.mean(year_ratings), np.median(year_ratings)))
 
 
 if __name__ == "__main__":
