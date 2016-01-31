@@ -222,8 +222,8 @@ by doing the following:
     from collections import defaultdict
     nicknames = defaultdict(list)
 
-*Exercise:* Write a program that populates a default dictionary from a
- file of nicknames as shown above.
+**Exercise:** Write a program that populates a default dictionary from
+ a file of nicknames as shown above.
 
 # Strings
 
