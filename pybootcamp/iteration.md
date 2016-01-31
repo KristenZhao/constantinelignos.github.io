@@ -66,7 +66,7 @@ the first negative item in a list. We iterate over the list and return
 the index when we find one.
 
 {% highlight python %}
-for idx, item in alist:
+for idx, item in enumerate(alist):
     if item < 0:
         result = idx
         break
