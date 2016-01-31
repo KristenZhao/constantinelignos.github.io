@@ -46,7 +46,7 @@ in_file = open("pp_ch1-2_tokenized.txt", "U")
 words = []
 for line in in_file:
     # Split the line into individual words
-    tokens = words.split()
+    tokens = line.split()
     # Add them to the list of words
     words.extend(tokens)
 {% endhighlight %}
