@@ -52,7 +52,7 @@ for line in in_file:
 {% endhighlight %}
 
 This is going to be rather slow and inefficient for building larger
-lists because `words` will be resized repeatedly.
+lists because of the way that appending/extending a list in a loop works.
 
 Instead, we can build a list with a powerful syntactic construct
 called a _list comprehension_. Let's first consider the simplest list
