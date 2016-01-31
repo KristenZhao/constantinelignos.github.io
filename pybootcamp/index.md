@@ -24,8 +24,9 @@ analytics: pybootcamp
 1. [Odds and ends](odds-ends.html)
 1. [Exercises](exercises2.html)
 
-## Modules
+## Examples
 1. [CSV](csv.html)
+1. [IPython notebooks](notebooks.html)
 
 ---
 
