@@ -199,15 +199,12 @@ Your file `count_words.py` will take filenames as command-line
 arguments and use a `Counter` (a special kind of dictionary defined
 in `collections`) to count their frequencies.
 
-It's easiest to think of this as writing three functions:
+It's easiest to think of this as writing a nested set of loops:
 
-1. A main function that gets the arguments from the command line and
-calls other functions.
-1. A generator function that loops over filenames, opens each file,
-loops over its lines, and yields one word at a time from the split
-line.
-1. A function that returns a counter from the generator returned by
-the previous function.
+1. An outer loop that loops over the filenames
+2. A middle loop that loops over the lines of each file
+3. An inner loop that loops over the words of each line and increments
+   their count
 
 To show that the counts are correct, you should call get the 10 most
 common words using the `most_common` method on the counter and print
