@@ -43,24 +43,8 @@ What if we divide instead? Change the crucial line to:
 ```python
 z = x / y
 ```
-
-We'll get `0`. Why is that? Well, by default, dividing an integer by
-an integer in Python will always result in an integer. In this case,
-it's rounded down, so we get zero. We can fix this by making one of
-the numbers a `float`; division between a float and any other number
-will produce a `float`.
-
-We can make `y` a float by assigning it `8.0` instead of `8`, or by
-just calling `float()` on it:
-
-```python
-z = x / float(y)
-```
-
-Now this prints `0.875`, as expected.
-
 Check out the documentation on [Python Numeric
-Types](http://docs.python.org/2/library/stdtypes.html#numeric-types-int-float-long-complex)
+Types](http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex)
 for a full list of the arithmetic operators in Python.
 
 At some point, if you've worked with another language you'll try to
