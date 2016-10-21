@@ -23,32 +23,32 @@ analytics: pybootcamp
 ## List basics
 
 For example, conisder the following `list` of strings:
-{% highlight python %}
+```python
 lyrics = ['Her', 'name', 'is', 'Rio']
-{% endhighlight %}
+```
 
 Each string itself is actually its own container type, although it is
 not a list. Lists are special in that you can modify their contents
 and the items in them do not need to be the same type:
-{% highlight python %}
+```python
 lyrics[0] = 'His'
 lyrics[3] = 7
-{% endhighlight %}
+```
 
 ## Working with lists
 
 `len` returns the length of a sequence, which is the number of
 items in it:
-{% highlight python %}
+```python
 >>> len(lyrics)
 4
-{% endhighlight %}
+```
 
 `[]` allow you to access elements in a list. If you ask
 for an index that’s not in the sequence, you get an error. In addition
 to the usual indices, you can ask for negative indices, which go from
 the end of the sequence
-{% highlight python %}
+```python
 >>> lyrics[0] # The first element
 'Her'
 >>> lyrics[4]
@@ -57,13 +57,13 @@ IndexError: list index out of range
 'Rio'
 >>> lyrics[-2] # The second-to-last element
 'is'
-{% endhighlight %}
+```
 
 You can get more than one element at a time via _slicing_. Slicing
 gets you an ordered subsequence of the list between two indices,
 _inclusive_ of the first index, and _exclusive_ of the second. To
 slice use the colon:
-{% highlight python %}
+```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> lyrics[0:1] # From 0 to before 1
 ['Her']
@@ -77,26 +77,26 @@ slice use the colon:
 ['Her', 'name', 'is', 'Rio']
 >>> lyrics[-2:] # From -2 to end
 ['is', 'Rio']
-{% endhighlight %}
+```
 
 The `for` loop gives simple iteration over sequences. Read this as
 "Each time the loop runs, set `item` equal to the next element in
 `items`.  We call `item` a _loop variable_, meaning it's the main
 variable that changes as the loop runs.
 
-{% highlight python %}
+```python
 for item in items:
     print item
-{% endhighlight %}
+```
 
 If we need to do something with the index as well, `enumerate` can be
 used. "Each time the loop runs, set `item` equal to the next element
 in items and set `index` to the index of that item.
 
-{% highlight python %}
+```python
 for index, item in enumerate(items):
     print item, "is at index", index
-{% endhighlight %}
+```
 
 Note two useful syntactic tidbits there. First, you can automatically
 _unpack_ the index and item at once. You can also print multiple
@@ -106,7 +106,7 @@ them.
 You can add one item to a list by using `append`, or multiple by using
 `extend`:
 
-{% highlight python %}
+```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> lyrics.append('and')
 >>> lyrics
@@ -114,15 +114,15 @@ You can add one item to a list by using `append`, or multiple by using
 >>> lyrics.extend(['she', 'dances', 'on', 'the', 'sand'])
 >>> lyrics
 ['Her', 'name', 'is', 'Rio', 'and', 'she', 'dances', 'on', 'the', 'sand']
-{% endhighlight %}
+```
 
 Note that these change this list in place but don't return
 anything. Don't make the mistake of writing something like:
 
-{% highlight python %}
+```python
 # This is pointless, lyrics2 will be None
 lyrics2 = lyrics.append('and')
-{% endhighlight %}
+```
 
 
 # Maps
@@ -142,7 +142,7 @@ unlike a `list`, where to find an item you have to check each element.
 Curly braces (`{}`) are in the creation of dictionaries, while square
 braces (`[]`) are used for lookup, just like lists.
 
-{% highlight python %}
+```python
 Creating a new empty dictionary
 words_to_nums = {}
 # Assigning a value to a key in the dictionary
@@ -153,7 +153,7 @@ num = words_to_nums['one']
 del words_to_nums['one']
 # Creating a new dictionary with items in it
 words_to_nums = {'one': 1, 'two': 2, 'three': 3}
-{% endhighlight %}
+```
 
 In this example the keys of the dictionary are strings. The keys in a
 `dict` can be any _immutable_ type, which we'll define later, but for
@@ -161,7 +161,7 @@ the moment contains strings, integers, and tuples but not lists or
 dictionaries.
 
 You can iterate over keys, values, or both using a for loop
-{% highlight python %}
+```python
 # Loop over keys
 for key in adict:
     print "Key:", key
@@ -173,16 +173,16 @@ for value in adict.values():
 # Loop over both
 for key, value in adict.items():
     print "Key", key, "has value", value
-{% endhighlight %}
+```
 
 Checking whether a key is in the dictionary is easy
-{% highlight python %}
+```python
 if key in adict:
     print "Found key", key
-{% endhighlight %}
+```
 
 What if a key doesn't exist? An _exception_ occurs.
-{% highlight python %}
+```python
 >>> words_to_nums = {'one': 1, 'two': 2, 'three': 3}
 >>> words_to_nums['one']
 1
@@ -191,7 +191,7 @@ Traceback (most recent call last):
   File "<pyshell#19>", line 1, in <module>
     words_to_nums['four']
 KeyError: 'four'
-{% endhighlight %}
+```
 
 You can fix this by either checking in advance for whether a key is in
 the dictionary or by handling the exception, which we'll talk about
@@ -229,7 +229,7 @@ by doing the following:
 
 Strings are a sequence type, so they can be sliced and iterated over just like a
 list:
-{% highlight python %}
+```python
 >>> word = "happy"
 >>> word[1:3]
 'ap'
@@ -241,24 +241,24 @@ a
 p
 p
 y
-{% endhighlight %}
+```
 
 However, they are _immutable_, so unlike a list you cannot change the
 contents of a string object.
 
-{% highlight python %}
+```python
 >>> word[0] = "s"
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'str' object does not support item assignment
-{% endhighlight %}
+```
 
 Rather than modifying a string, you just can just replace it with
 another one:
 
-{% highlight python %}
+```python
 >>> word = "sappy"
-{% endhighlight %}
+```
 
 ## String methods
 
@@ -276,7 +276,7 @@ strings. Note that this method is called on the *delimiter*, not the
 sequence.
 
 Examples:
-{% highlight python %}
+```python
 >>> "file.py".endswith(".py")
 True
 >>> " 1 2 3 ".split()
@@ -287,7 +287,7 @@ True
 'The quick brown fox'
 >>> ", ".join(["cats", "dogs", "elephants"])
 'cats, dogs, elephants'
-{% endhighlight %}
+```
 
 ## String formatting
 
@@ -295,16 +295,16 @@ You often want to print out strings nicely, as a part of normal
 operation or debugging. This is best accomplished by using the
 `format` method on a string.
 
-{% highlight python %}
+```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> print "lyrics contains {} items".format(len(lyrics))
 lyrics contains 4 items
-{% endhighlight %}
+```
 
 The `format` method replaces areas marked with `{}` with its
 arguments. You can use this to this to control the details of what
 goes in. For example:
-{% highlight python %}
+```python
 >>> print "Lyrics: {}".format(lyrics)
 Lyrics: ['Her', 'name', 'is', 'Rio']
 >>> print "First word: {}".format(lyrics[0])
@@ -315,18 +315,18 @@ First word: 'Her'
 2/3 is 0.666666666667
 >>> print "2/3 is {:0.2f}".format(2.0 / 3.0)
 2/3 is 0.67
-{% endhighlight %}
+```
 
 You can use indices to control the order in which strings are
 interpolated (placed into the host string). If you leave them out,
 strings will be interpolated in the order given:
 
-{% highlight python %}
+```python
 >>> "{} spam! {} spam!".format("Lovely", "Wonderful")
 'Lovely spam! Wonderful spam!'
 >>> "{1} {0}! {2} {0}!".format("spam", "Lovely", "Wonderful")
 'Lovely spam! Wonderful spam!'
-{% endhighlight %}
+```
 
 By default, format coaxes its arguments into the prettiest strings
 possible. Using `{!r}` calls `repr` on the argument, which makes the
@@ -343,7 +343,7 @@ As alluded to earlier, some types of data can be changed in-place
 while others cannot. The `tuple` is a type similar to a list but one
 that cannot be changed once it is created; it is _immutable_.
 
-{% highlight python %}
+```python
 >>> words1 = ['the', 'dog']
 >>> words1[1] = 'cat'
 >>> words1
@@ -354,11 +354,11 @@ Traceback (most recent call last):
   File "<pyshell#58>", line 1, in <module>
     words2[1] = 'cat'
 TypeError: 'tuple' object does not support item assignment
-{% endhighlight %}
+```
 
 This manifests itself when considering the question "will changing
 this object affect anything else?". For example:
-{% highlight python %}
+```python
 >>> x = 7
 >>> y = x
 >>> x += 1
@@ -366,13 +366,13 @@ this object affect anything else?". For example:
 8
 >>> y
 7
-{% endhighlight %}
+```
 
 As integers are immutable, at the beginning `x` and `y` refer to the
 same object but when `x` is incremented it points to a different
 object instead. However, note:
 
-{% highlight python %}
+```python
 >>> x = ['a']
 >>> y = x
 >>> x.append('b')
@@ -380,7 +380,7 @@ object instead. However, note:
 ['a', 'b']
 >>> y
 ['a', 'b']
-{% endhighlight %}
+```
 
 As lists are mutable, `append` changes the object in-place, affecting
 `x` and `y`.

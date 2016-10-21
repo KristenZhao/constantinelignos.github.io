@@ -18,14 +18,14 @@ analytics: pybootcamp
 The previous example brought up the basic structure of a Python
 conditional. It looks like this:
 
-{% highlight python %}
+```python
 def test(x):
     """Print whether the argument evaluates as True or False."""
     if x:
         print 'Evaluated as True'
     else:
         print 'Evaluated as False'
-{% endhighlight %}
+```
 
 Python has two built-in boolean constants `True` and `False`, but you
 usually don't need to compare directly against them. You can specify
@@ -39,13 +39,13 @@ but you don't have a list of it at the beginning. The solution is to
 use a `while` loop. Assume for the moment you have a variable `done`
 that you will use to record whether you're done:
 
-{% highlight python %}
+```python
 while not done:
     # Call a magic function to do work
     result = perform_work()
     # Set done if appropriate
     done = is_good_enough(result)
-{% endhighlight %}
+```
 
 This loop will automatically stop running when `done` is set to `True`.
 
@@ -65,27 +65,27 @@ Here's an example using both. Let's say we want to find the index of
 the first negative item in a list. We iterate over the list and return
 the index when we find one.
 
-{% highlight python %}
+```python
 for idx, item in enumerate(alist):
     if item < 0:
         result = idx
         break
 else:
     result = None
-{% endhighlight %}
+```
 
 Also, you can use `continue` to skip to the next iteration. For
 example, if you only want to process positive numbers, you might check
 each item and skip some.
 
-{% highlight python %}
+```python
 for item in items:
     # Skip any non-positive items
     if item <= 0:
         continue
 
     do_something(item)
-{% endhighlight %}
+```
 
 # Exceptions
 
@@ -95,9 +95,9 @@ for item in items:
 - So any exceptions that you expect to occur during the normal operation of your program should be handled.
 
 Handling is accomplished with a try…except block:
-{% highlight python %}
+```python
 try:
     # Do something risky here
 except <name of exception to catch>:
     # Take some non-risky corrective action
-{% endhighlight %}
+```

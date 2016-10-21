@@ -56,7 +56,7 @@ The simplest thing you can type is an _expression_. The simplest
 expressions are just literals, which evaluate to themselves. Note that
 Python uses single and double-quotes interchangeably, and doesn't
 distinguish between _characters_ and _strings_ like many other languages.
-{% highlight python %}
+```python
 >>> 7
 7
 >>> 7.5
@@ -65,13 +65,13 @@ distinguish between _characters_ and _strings_ like many other languages.
 'H'
 >>> "Hello world!"
 'Hello world!'
-{% endhighlight %}
+```
 
 ## Assignment
 You don't have to do much work to assign values to variables. What
 are called "variables" in most programming languages are technically called
 "names" in Python. We'll worry about what that means later.
-{% highlight python %}
+```python
 >>> x = 7
 >>> x
 7
@@ -84,7 +84,7 @@ are called "variables" in most programming languages are technically called
 >>> x = "Hello world!"
 >>> x
 'Hello world!'
-{% endhighlight %}
+```
 
 Note that you don't have to declare variables in advance and you don't tell
 Python what _type_ (string, integer, etc.) a variable will have.
@@ -95,7 +95,7 @@ These are very useful when you're trying to sort out issues in the REPL.
 You'll rarely need to use these in real programs.
 
 - `type(x)`: see what type `x` is
-{% highlight python %}
+```python
 >>> type(7)
 <type 'int'>
 >>> type(7.0)
@@ -104,7 +104,7 @@ You'll rarely need to use these in real programs.
 <type 'str'>
 >>> type("Hello world!")
 <type 'str'>
-{% endhighlight %}
+```
 - `dir()`: see what names are bound at the moment
 - `dir(x)`: see all methods that `x` provides
 - `id(x)`: get the identity (effectively memory address) of what `x` refers to.

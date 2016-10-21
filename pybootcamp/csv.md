@@ -32,7 +32,7 @@ The simplest way to read a CSV is the
 [`csv.reader`](http://docs.python.org/2/library/csv.html#csv.reader)
 function. This will return a reader object that allows you to read
 each row as a list. An example adapted from the documentation:
-{% highlight python %}
+```python
 >>> import csv
 >>> with open('eggs.csv', 'U') as csvfile:
 ...     spamreader = csv.reader(csvfile)
@@ -40,7 +40,7 @@ each row as a list. An example adapted from the documentation:
 ...         print ', '.join(row)
 Spam, Spam, Spam, Spam, Spam, Baked Beans
 Spam, Lovely Spam, Wonderful Spam
-{% endhighlight %}
+```
 
 This demonstrates another useful Python construct, using `with` to
 mark of a block where you will use a file, which will automatically

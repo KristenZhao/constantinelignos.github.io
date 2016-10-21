@@ -33,15 +33,15 @@ The data comes from a [tokenized version of chapters 1-2 of _Pride and
 Prejudice_](examples/pp_ch1-2_tokenized.txt). We may want to
 transform this into a list of the individual words:
 
-{% highlight python %}
+```python
 ['it', 'is', 'a', 'truth', 'universally', 'acknowledged', 'that',
 'a', 'single', 'man', 'in', 'possession', 'of', 'a', 'good',
 'fortune', 'must', 'be', 'in', 'want', 'of', 'a', 'wife']
-{% endhighlight %}
+```
 
 We can imagine a simple way to do this:
 
-{% highlight python %}
+```python
 in_file = open("pp_ch1-2_tokenized.txt", "U")
 words = []
 for line in in_file:
@@ -49,7 +49,7 @@ for line in in_file:
     tokens = line.split()
     # Add them to the list of words
     words.extend(tokens)
-{% endhighlight %}
+```
 
 This is going to be rather slow and inefficient for building larger
 lists because of the way that appending/extending a list in a loop works.
@@ -58,40 +58,40 @@ Instead, we can build a list with a powerful syntactic construct
 called a _list comprehension_. Let's first consider the simplest list
 comprehension possible, one that just make a copy of a list.
 
-{% highlight python %}
+```python
 old_list = ['a', 'b', 'c', 'D', 'E', 'F']
 new_list = [item for item in old_list]
-{% endhighlight %}
+```
 
 `new_list` will contain the exact contents of `old_list`, equivalent
 to `new_list = old_list[:]`. The list comprehension is equivalent to
 this:
 
-{% highlight python %}
+```python
 new_list = []
 for item in old_list:
     new_list.append(item)
-{% endhighlight %}
+```
 
 It's just much cleaner to write and more efficient. Of course, we may
 want to do things that are more complicated:
 
-{% highlight python %}
+```python
 # Convert all items to lowercase
 lower_list = [item.lower() for item in old_list]
 # Get rid of any item that is 'c'
 no_c_list = [item for item in old_list if item != 'c']
 # Add 'The letter ' to each item
 letter_list = ["The letter " + item for item in old_list]
-{% endhighlight %}
+```
 
 Now that we understand the basics, we can return to the original
 problem, which requires two loops:
 
-{% highlight python %}
+```python
 words = [word for line in open("pp_ch1-2_tokenized.txt", "U")
          for word in line.split()]
-{% endhighlight %}
+```
 
 The line break in the middle of the comprehension is just for visual
 clarity; it doesn't change the meaning of it at all.
@@ -104,10 +104,10 @@ creates a huge list of all of the words in memory at once.
 If we only look at one word at a time, we can write this in a very
 slightly different way to make it more efficient:
 
-{% highlight python %}
+```python
 gen_words = (word for line in open("pp_ch1-2_tokenized.txt", "U")
              for word in line.split())
-{% endhighlight %}
+```
 
 This is what's called a _generator expression_, which means that
 rather than creating a list is creates a generator that _yields_ the
@@ -117,7 +117,7 @@ once.
 We can also write generator functions. For example, this function
 yields Fibonacci numbers:
 
-{% highlight python %}
+```python
 def fib(n):
     """Generate the first n Fibonacci numbers."""
     f0 = 0
@@ -133,7 +133,7 @@ def fib(n):
             yield result
             f0 = f1
             f1 = result
-{% endhighlight %}
+```
 
 As an exercise, you'll rewrite the expression for `gen_words` as a generator function 
 
@@ -156,18 +156,18 @@ to their frequencies from a file that looked like this:
 </pre>
 
 This can easily be written as a dictionary comprehension:
-{% highlight python %}
+```python
 word_freqs = {line.split()[1]: int(line.split()[0]) for line in in_file}
-{% endhighlight %}
+```
 
 It's a little ugly because we can't store the result of calling
 `split` anywhere so we have to call it twice. We can also create
 dictionaries in a similar fashion using the `dict` constructor, which
 will work when given tuples of the format `(key, value)`:
 
-{% highlight python %}
+```python
 word_freqs = dict((line.split()[1], int(line.split()[0])) for line in in_file)
-{% endhighlight %}
+```
 
 Inside the call to `dict` we are actually using a generator
 expression.
@@ -175,10 +175,10 @@ expression.
 We can make a modified copy of a dictionary easily using a dictionary
 comprehension:
 
-{% highlight python %}
+```python
 # Make a new dictionary with one added to every frequency
 word_freqs2 = {word: freq + 1 for word, freq in word_freqs.iteritems()}
-{% endhighlight %}
+```
 
 You'll noticed I used `iteritems` instead of the normal `items`. There
 are similar `iterkeys` and `itervalues` methods. Inside a

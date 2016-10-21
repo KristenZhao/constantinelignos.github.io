@@ -16,22 +16,22 @@ analytics: pybootcamp
 # Basic math
 
 To print something, just use `print`:
-{% highlight python %}
+```python
 >>> x = 7
 >>> print x
 7
-{% endhighlight %}
+```
 
 `print` can work on any type. For our first program, we'll do some
 simple arithmetic. Let's add two variables together and print the
 output. Make a new file, enter this script, and run it:
 
-{% highlight python %}
+```python
 x = 7
 y = 8
 z = x + y
 print z
-{% endhighlight %}
+```
 
 How can you run a program? If you're using IDLE, hit F5. If you're
 working from the command line, run the file, for example:  
@@ -40,9 +40,9 @@ working from the command line, run the file, for example:
 It should produce the output `15`. That was easy.
 
 What if we divide instead? Change the crucial line to:
-{% highlight python %}
+```python
 z = x / y
-{% endhighlight %}
+```
 
 We'll get `0`. Why is that? Well, by default, dividing an integer by
 an integer in Python will always result in an integer. In this case,
@@ -53,9 +53,9 @@ will produce a `float`.
 We can make `y` a float by assigning it `8.0` instead of `8`, or by
 just calling `float()` on it:
 
-{% highlight python %}
+```python
 z = x / float(y)
-{% endhighlight %}
+```
 
 Now this prints `0.875`, as expected.
 
@@ -76,9 +76,9 @@ that we'll go over in more detail later. For now, think of a list as a
 variable-sized array of ordered items. To initialize a list, we use
 `[]` with commas to separate the items.
 
-{% highlight python %}
+```python
 letters = ['a', 'b', 'c']
-{% endhighlight %}
+```
 
 This creates a list with three items in it. Python is zero-indexed, so
 the first item is at position (index) zero, the second at position
@@ -86,18 +86,18 @@ one, etc.: `0: 'a'; 1: 'b'; 2: 'c'`.
 
 So if we want to print each item in `letters`, we can write a loop as
 follows:
-{% highlight python %}
+```python
 for item in letters:
     print item
-{% endhighlight %}
+```
 
 Note that a `for` statement ends with a colon. The code that is inside
 the loop _must be indented one level_. This will output:
-{% highlight python %}
+```python
 a
 b
 c
-{% endhighlight %}
+```
 
 Note that each time you `print`, by default it puts each item on its
 own line. If you don't want this, put a comma after the item being
@@ -115,9 +115,9 @@ files. To open a file, simply use `open`. For now, let's work with the
 [the first chapter of _Pride and Prejudice_](examples/pp_ch1.txt).
 
 To open it, after downloading it do the following:
-{% highlight python %}
+```python
 chapter = open("pp_ch1.txt", "U")
-{% endhighlight %}
+```
 
 It's tempting to use simple names such as `file` or `input`; these are
 both names of python built-in objects so best to leave them alone for
@@ -137,12 +137,12 @@ file, and using `print` to output each line.
 
 So, here's what this function will look like:
 
-{% highlight python %}
+```python
 def print_file(filename):
     """Print the contents of a file."""
     for line in open(filename, "U"):
     	print line.rstrip()
-{% endhighlight %}
+```
 
 A few things to note:
 
@@ -160,11 +160,11 @@ end with a newline marker until we explicitly remove it.
 
 Functions can also return a value, for example we may want to set a
 variable to the result of calling a function:
-{% highlight python %}
+```python
 def increment(num):
     """Return the input number increased by one."""
     return num + 1
-{% endhighlight %}
+```
 
 **Mini-exercise**: Without copying the above example, write a
   function that takes two variables as arguments and returns the
@@ -180,16 +180,16 @@ module.
 
 Accessing this can be demonstrated by the following program, which
 I'll call `test.py`:
-{% highlight python %}
+```python
 import sys
 print sys.argv
-{% endhighlight %}
+```
 We need to test this from the command line, not inside another program
 such as IDLE:
-{% highlight bash %}
+```bash
 $ python test.py a b c
 ['test.py', 'a', 'b', 'c']
-{% endhighlight %}
+```
 
 We notice that the first item appears to be the name of the script as
 it was called; this is generally of little use. So we almost always
@@ -204,7 +204,7 @@ file and execute anything that is at the outer level of
 indentation. If your file defines functions but you want them to run
 when the program is executed, you need to specify that. Here's a
 modified version of the program above that demonstrates this:
-{% highlight python %}
+```python
 import sys
 
 
@@ -215,7 +215,7 @@ def print_args():
 
 if __name__ == "__main__":
     print_args()
-{% endhighlight %}
+```
 
 This file defines the `print_args` function and then will run it the
 file is run as a program. The purpose of the block under
@@ -260,7 +260,7 @@ number of lines in a file. It should take the name of a single file as
 a command line argument (which can be retrieved as `sys.argv[1]`),
 count the number of lines in it, and print that number at the end. For
 example:
-{% highlight bash %}
+```bash
 $ python countlines.py pp_ch1.txt
 111
-{% endhighlight %}
+```
