@@ -64,9 +64,9 @@ class Counter(object):
 Usage of this would look like:
 ```python
 >>> c = Counter() # Initialize a new counter
->>> print repr(c)
+>>> print(repr(c))
 <Counter: 0>
->>> print c # Same as str(c)
+>>> print(c) # Same as str(c)
 0
 >>> c.increment(1)
 >>> c

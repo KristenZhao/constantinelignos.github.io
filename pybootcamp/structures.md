@@ -86,7 +86,7 @@ variable that changes as the loop runs.
 
 ```python
 for item in items:
-    print item
+    print(item)
 ```
 
 If we need to do something with the index as well, `enumerate` can be
@@ -95,7 +95,7 @@ in items and set `index` to the index of that item.
 
 ```python
 for index, item in enumerate(items):
-    print item, "is at index", index
+    print(item, "is at index", index)
 ```
 
 Note two useful syntactic tidbits there. First, you can automatically
@@ -164,21 +164,21 @@ You can iterate over keys, values, or both using a for loop
 ```python
 # Loop over keys
 for key in adict:
-    print "Key:", key
+    print("Key:", key)
 
 # Loop over values
 for value in adict.values():
-    print "Value:", value
+    print("Value:", value)
 
 # Loop over both
 for key, value in adict.items():
-    print "Key", key, "has value", value
+    print("Key", key, "has value", value)
 ```
 
 Checking whether a key is in the dictionary is easy
 ```python
 if key in adict:
-    print "Found key", key
+    print("Found key", key)
 ```
 
 What if a key doesn't exist? An _exception_ occurs.
@@ -234,7 +234,7 @@ list:
 >>> word[1:3]
 'ap'
 >>> for letter in word:
-        print letter
+        print(letter)
    
 h
 a
@@ -297,7 +297,7 @@ operation or debugging. This is best accomplished by using the
 
 ```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
->>> print "lyrics contains {} items".format(len(lyrics))
+>>> print("lyrics contains {} items".format(len(lyrics)))
 lyrics contains 4 items
 ```
 
@@ -305,15 +305,15 @@ The `format` method replaces areas marked with `{}` with its
 arguments. You can use this to this to control the details of what
 goes in. For example:
 ```python
->>> print "Lyrics: {}".format(lyrics)
+>>> print("Lyrics: {}".format(lyrics))
 Lyrics: ['Her', 'name', 'is', 'Rio']
->>> print "First word: {}".format(lyrics[0])
+>>> print("First word: {}".format(lyrics[0]))
 First word: Her
->>> print "First word: {!r}".format(lyrics[0])
+>>> print("First word: {!r}".format(lyrics[0]))
 First word: 'Her'
->>> print "2/3 is {}".format(2.0 / 3.0)
+>>> print("2/3 is {}".format(2.0 / 3.0))
 2/3 is 0.666666666667
->>> print "2/3 is {:0.2f}".format(2.0 / 3.0)
+>>> print("2/3 is {:0.2f}".format(2.0 / 3.0))
 2/3 is 0.67
 ```
 

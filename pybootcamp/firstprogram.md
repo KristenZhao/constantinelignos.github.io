@@ -18,7 +18,7 @@ analytics: pybootcamp
 To print something, just use `print`:
 ```python
 >>> x = 7
->>> print x
+>>> print(x)
 7
 ```
 
@@ -30,7 +30,7 @@ output. Make a new file, enter this script, and run it:
 x = 7
 y = 8
 z = x + y
-print z
+print(z)
 ```
 
 How can you run a program? If you're using IDLE, hit F5. If you're
@@ -88,7 +88,7 @@ So if we want to print each item in `letters`, we can write a loop as
 follows:
 ```python
 for item in letters:
-    print item
+    print(item)
 ```
 
 Note that a `for` statement ends with a colon. The code that is inside
@@ -100,9 +100,8 @@ c
 ```
 
 Note that each time you `print`, by default it puts each item on its
-own line. If you don't want this, put a comma after the item being
-printed:  
-` print item,`
+own line. If you don't want this, set the `end` argument to an empty string:
+` print(item, end='')`
 
 **Mini-exercise**: Clear out the above program. Without copying the
  above example, write a program where you put a few objects in a list
@@ -141,7 +140,7 @@ So, here's what this function will look like:
 def print_file(filename):
     """Print the contents of a file."""
     for line in open(filename, "U"):
-    	print line.rstrip()
+    	print(line.rstrip())
 ```
 
 A few things to note:
@@ -182,7 +181,7 @@ Accessing this can be demonstrated by the following program, which
 I'll call `test.py`:
 ```python
 import sys
-print sys.argv
+print(sys.argv)
 ```
 We need to test this from the command line, not inside another program
 such as IDLE:
@@ -210,7 +209,7 @@ import sys
 
 def print_args():
     """Print the command line arguments."""
-    print sys.argv
+    print(sys.argv)
 
 
 if __name__ == "__main__":

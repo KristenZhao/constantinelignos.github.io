@@ -22,9 +22,9 @@ conditional. It looks like this:
 def test(x):
     """Print whether the argument evaluates as True or False."""
     if x:
-        print 'Evaluated as True'
+        print('Evaluated as True')
     else:
-        print 'Evaluated as False'
+        print('Evaluated as False')
 ```
 
 Python has two built-in boolean constants `True` and `False`, but you
