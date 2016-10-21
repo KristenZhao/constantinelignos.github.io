@@ -23,6 +23,8 @@ analytics: pybootcamp
 ## List basics
 
 For example, conisder the following `list` of strings:
+
+
 ```python
 lyrics = ['Her', 'name', 'is', 'Rio']
 ```
@@ -30,6 +32,8 @@ lyrics = ['Her', 'name', 'is', 'Rio']
 Each string itself is actually its own container type, although it is
 not a list. Lists are special in that you can modify their contents
 and the items in them do not need to be the same type:
+
+
 ```python
 lyrics[0] = 'His'
 lyrics[3] = 7
@@ -39,6 +43,8 @@ lyrics[3] = 7
 
 `len` returns the length of a sequence, which is the number of
 items in it:
+
+
 ```python
 >>> len(lyrics)
 4
@@ -48,6 +54,7 @@ items in it:
 for an index that’s not in the sequence, you get an error. In addition
 to the usual indices, you can ask for negative indices, which go from
 the end of the sequence
+
 ```python
 >>> lyrics[0] # The first element
 'Her'
@@ -63,6 +70,7 @@ You can get more than one element at a time via _slicing_. Slicing
 gets you an ordered subsequence of the list between two indices,
 _inclusive_ of the first index, and _exclusive_ of the second. To
 slice use the colon:
+
 ```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> lyrics[0:1] # From 0 to before 1
@@ -84,6 +92,7 @@ The `for` loop gives simple iteration over sequences. Read this as
 `items`.  We call `item` a _loop variable_, meaning it's the main
 variable that changes as the loop runs.
 
+
 ```python
 for item in items:
     print(item)
@@ -92,6 +101,7 @@ for item in items:
 If we need to do something with the index as well, `enumerate` can be
 used. "Each time the loop runs, set `item` equal to the next element
 in items and set `index` to the index of that item.
+
 
 ```python
 for index, item in enumerate(items):
@@ -106,6 +116,7 @@ them.
 You can add one item to a list by using `append`, or multiple by using
 `extend`:
 
+
 ```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> lyrics.append('and')
@@ -118,6 +129,7 @@ You can add one item to a list by using `append`, or multiple by using
 
 Note that these change this list in place but don't return
 anything. Don't make the mistake of writing something like:
+
 
 ```python
 # This is pointless, lyrics2 will be None
@@ -142,6 +154,7 @@ unlike a `list`, where to find an item you have to check each element.
 Curly braces (`{}`) are in the creation of dictionaries, while square
 braces (`[]`) are used for lookup, just like lists.
 
+
 ```python
 Creating a new empty dictionary
 words_to_nums = {}
@@ -161,6 +174,7 @@ the moment contains strings, integers, and tuples but not lists or
 dictionaries.
 
 You can iterate over keys, values, or both using a for loop
+
 ```python
 # Loop over keys
 for key in adict:
@@ -176,12 +190,14 @@ for key, value in adict.items():
 ```
 
 Checking whether a key is in the dictionary is easy
+
 ```python
 if key in adict:
     print("Found key", key)
 ```
 
 What if a key doesn't exist? An _exception_ occurs.
+
 ```python
 >>> words_to_nums = {'one': 1, 'two': 2, 'three': 3}
 >>> words_to_nums['one']
@@ -229,6 +245,7 @@ by doing the following:
 
 Strings are a sequence type, so they can be sliced and iterated over just like a
 list:
+
 ```python
 >>> word = "happy"
 >>> word[1:3]
@@ -246,6 +263,7 @@ y
 However, they are _immutable_, so unlike a list you cannot change the
 contents of a string object.
 
+
 ```python
 >>> word[0] = "s"
 Traceback (most recent call last):
@@ -255,6 +273,7 @@ TypeError: 'str' object does not support item assignment
 
 Rather than modifying a string, you just can just replace it with
 another one:
+
 
 ```python
 >>> word = "sappy"
@@ -276,6 +295,7 @@ strings. Note that this method is called on the *delimiter*, not the
 sequence.
 
 Examples:
+
 ```python
 >>> "file.py".endswith(".py")
 True
@@ -295,6 +315,7 @@ You often want to print out strings nicely, as a part of normal
 operation or debugging. This is best accomplished by using the
 `format` method on a string.
 
+
 ```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> print("lyrics contains {} items".format(len(lyrics)))
@@ -304,6 +325,7 @@ lyrics contains 4 items
 The `format` method replaces areas marked with `{}` with its
 arguments. You can use this to this to control the details of what
 goes in. For example:
+
 ```python
 >>> print("Lyrics: {}".format(lyrics))
 Lyrics: ['Her', 'name', 'is', 'Rio']
@@ -320,6 +342,7 @@ First word: 'Her'
 You can use indices to control the order in which strings are
 interpolated (placed into the host string). If you leave them out,
 strings will be interpolated in the order given:
+
 
 ```python
 >>> "{} spam! {} spam!".format("Lovely", "Wonderful")
@@ -343,6 +366,7 @@ As alluded to earlier, some types of data can be changed in-place
 while others cannot. The `tuple` is a type similar to a list but one
 that cannot be changed once it is created; it is _immutable_.
 
+
 ```python
 >>> words1 = ['the', 'dog']
 >>> words1[1] = 'cat'
@@ -358,6 +382,7 @@ TypeError: 'tuple' object does not support item assignment
 
 This manifests itself when considering the question "will changing
 this object affect anything else?". For example:
+
 ```python
 >>> x = 7
 >>> y = x
@@ -371,6 +396,7 @@ this object affect anything else?". For example:
 As integers are immutable, at the beginning `x` and `y` refer to the
 same object but when `x` is incremented it points to a different
 object instead. However, note:
+
 
 ```python
 >>> x = ['a']

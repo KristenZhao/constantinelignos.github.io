@@ -33,6 +33,7 @@ The data comes from a [tokenized version of chapters 1-2 of _Pride and
 Prejudice_](examples/pp_ch1-2_tokenized.txt). We may want to
 transform this into a list of the individual words:
 
+
 ```python
 ['it', 'is', 'a', 'truth', 'universally', 'acknowledged', 'that',
 'a', 'single', 'man', 'in', 'possession', 'of', 'a', 'good',
@@ -40,6 +41,7 @@ transform this into a list of the individual words:
 ```
 
 We can imagine a simple way to do this:
+
 
 ```python
 in_file = open("pp_ch1-2_tokenized.txt", "U")
@@ -58,6 +60,7 @@ Instead, we can build a list with a powerful syntactic construct
 called a _list comprehension_. Let's first consider the simplest list
 comprehension possible, one that just make a copy of a list.
 
+
 ```python
 old_list = ['a', 'b', 'c', 'D', 'E', 'F']
 new_list = [item for item in old_list]
@@ -67,6 +70,7 @@ new_list = [item for item in old_list]
 to `new_list = old_list[:]`. The list comprehension is equivalent to
 this:
 
+
 ```python
 new_list = []
 for item in old_list:
@@ -75,6 +79,7 @@ for item in old_list:
 
 It's just much cleaner to write and more efficient. Of course, we may
 want to do things that are more complicated:
+
 
 ```python
 # Convert all items to lowercase
@@ -87,6 +92,7 @@ letter_list = ["The letter " + item for item in old_list]
 
 Now that we understand the basics, we can return to the original
 problem, which requires two loops:
+
 
 ```python
 words = [word for line in open("pp_ch1-2_tokenized.txt", "U")
@@ -104,6 +110,7 @@ creates a huge list of all of the words in memory at once.
 If we only look at one word at a time, we can write this in a very
 slightly different way to make it more efficient:
 
+
 ```python
 gen_words = (word for line in open("pp_ch1-2_tokenized.txt", "U")
              for word in line.split())
@@ -116,6 +123,7 @@ once.
 
 We can also write generator functions. For example, this function
 yields Fibonacci numbers:
+
 
 ```python
 def fib(n):
@@ -156,6 +164,7 @@ to their frequencies from a file that looked like this:
 </pre>
 
 This can easily be written as a dictionary comprehension:
+
 ```python
 word_freqs = {line.split()[1]: int(line.split()[0]) for line in in_file}
 ```
@@ -164,6 +173,7 @@ It's a little ugly because we can't store the result of calling
 `split` anywhere so we have to call it twice. We can also create
 dictionaries in a similar fashion using the `dict` constructor, which
 will work when given tuples of the format `(key, value)`:
+
 
 ```python
 word_freqs = dict((line.split()[1], int(line.split()[0])) for line in in_file)
@@ -174,6 +184,7 @@ expression.
 
 We can make a modified copy of a dictionary easily using a dictionary
 comprehension:
+
 
 ```python
 # Make a new dictionary with one added to every frequency

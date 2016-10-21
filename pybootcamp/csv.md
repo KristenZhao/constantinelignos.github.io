@@ -32,6 +32,7 @@ The simplest way to read a CSV is the
 [`csv.reader`](http://docs.python.org/2/library/csv.html#csv.reader)
 function. This will return a reader object that allows you to read
 each row as a list. An example adapted from the documentation:
+
 ```python
 >>> import csv
 >>> with open('eggs.csv', 'U') as csvfile:

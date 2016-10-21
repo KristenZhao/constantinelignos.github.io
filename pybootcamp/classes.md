@@ -36,6 +36,7 @@ For now, let's consider a class whose goal it is to count upwards from
 zero and reset the count if requested. This class is contained in
 [counter.py](examples/counter.py).
 
+
 ```python
 class Counter(object):
     """Simulate a simple hand counter."""
@@ -62,6 +63,7 @@ class Counter(object):
 ```
 
 Usage of this would look like:
+
 ```python
 >>> c = Counter() # Initialize a new counter
 >>> print(repr(c))
@@ -112,6 +114,7 @@ Here's an example of overriding `__setitem__` to allow a dictionary to
 track the sum over all its values. You can download the full example,
 [totaldict.py](examples/totaldict.py).
 
+
 ```python
 class TotalDict(dict):
     """Track the total value of all dictionary keys."""
@@ -127,6 +130,7 @@ class TotalDict(dict):
 ```
  
 Here's an example of this class in use:
+
 ```python
 >>> t = TotalDict()
 >>> t.total

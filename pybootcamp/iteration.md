@@ -18,6 +18,7 @@ analytics: pybootcamp
 The previous example brought up the basic structure of a Python
 conditional. It looks like this:
 
+
 ```python
 def test(x):
     """Print whether the argument evaluates as True or False."""
@@ -38,6 +39,7 @@ example, let's say you want to process data until some falg is set,
 but you don't have a list of it at the beginning. The solution is to
 use a `while` loop. Assume for the moment you have a variable `done`
 that you will use to record whether you're done:
+
 
 ```python
 while not done:
@@ -65,6 +67,7 @@ Here's an example using both. Let's say we want to find the index of
 the first negative item in a list. We iterate over the list and return
 the index when we find one.
 
+
 ```python
 for idx, item in enumerate(alist):
     if item < 0:
@@ -77,6 +80,7 @@ else:
 Also, you can use `continue` to skip to the next iteration. For
 example, if you only want to process positive numbers, you might check
 each item and skip some.
+
 
 ```python
 for item in items:
@@ -95,6 +99,7 @@ for item in items:
 - So any exceptions that you expect to occur during the normal operation of your program should be handled.
 
 Handling is accomplished with a try…except block:
+
 ```python
 try:
     # Do something risky here

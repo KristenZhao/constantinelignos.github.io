@@ -56,6 +56,7 @@ The simplest thing you can type is an _expression_. The simplest
 expressions are just literals, which evaluate to themselves. Note that
 Python uses single and double-quotes interchangeably, and doesn't
 distinguish between _characters_ and _strings_ like many other languages.
+
 ```python
 >>> 7
 7
@@ -71,6 +72,7 @@ distinguish between _characters_ and _strings_ like many other languages.
 You don't have to do much work to assign values to variables. What
 are called "variables" in most programming languages are technically called
 "names" in Python. We'll worry about what that means later.
+
 ```python
 >>> x = 7
 >>> x
@@ -95,6 +97,7 @@ These are very useful when you're trying to sort out issues in the REPL.
 You'll rarely need to use these in real programs.
 
 - `type(x)`: see what type `x` is
+
 ```python
 >>> type(7)
 <type 'int'>

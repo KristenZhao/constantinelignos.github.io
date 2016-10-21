@@ -16,6 +16,7 @@ analytics: pybootcamp
 # Basic math
 
 To print something, just use `print`:
+
 ```python
 >>> x = 7
 >>> print(x)
@@ -25,6 +26,7 @@ To print something, just use `print`:
 `print` can work on any type. For our first program, we'll do some
 simple arithmetic. Let's add two variables together and print the
 output. Make a new file, enter this script, and run it:
+
 
 ```python
 x = 7
@@ -40,6 +42,7 @@ working from the command line, run the file, for example:
 It should produce the output `15`. That was easy.
 
 What if we divide instead? Change the crucial line to:
+
 
 ```python
 z = x / y
@@ -61,6 +64,7 @@ that we'll go over in more detail later. For now, think of a list as a
 variable-sized array of ordered items. To initialize a list, we use
 `[]` with commas to separate the items.
 
+
 ```python
 letters = ['a', 'b', 'c']
 ```
@@ -71,6 +75,7 @@ one, etc.: `0: 'a'; 1: 'b'; 2: 'c'`.
 
 So if we want to print each item in `letters`, we can write a loop as
 follows:
+
 ```python
 for item in letters:
     print(item)
@@ -78,6 +83,7 @@ for item in letters:
 
 Note that a `for` statement ends with a colon. The code that is inside
 the loop _must be indented one level_. This will output:
+
 ```python
 a
 b
@@ -99,6 +105,7 @@ files. To open a file, simply use `open`. For now, let's work with the
 [the first chapter of _Pride and Prejudice_](examples/pp_ch1.txt).
 
 To open it, after downloading it do the following:
+
 ```python
 chapter = open("pp_ch1.txt", "U")
 ```
@@ -120,6 +127,7 @@ in a file. We're going to combine a `for` loop, using `open` to read a
 file, and using `print` to output each line.
 
 So, here's what this function will look like:
+
 
 ```python
 def print_file(filename):
@@ -144,6 +152,7 @@ end with a newline marker until we explicitly remove it.
 
 Functions can also return a value, for example we may want to set a
 variable to the result of calling a function:
+
 ```python
 def increment(num):
     """Return the input number increased by one."""
@@ -164,6 +173,7 @@ module.
 
 Accessing this can be demonstrated by the following program, which
 I'll call `test.py`:
+
 ```python
 import sys
 print(sys.argv)
@@ -188,6 +198,7 @@ file and execute anything that is at the outer level of
 indentation. If your file defines functions but you want them to run
 when the program is executed, you need to specify that. Here's a
 modified version of the program above that demonstrates this:
+
 ```python
 import sys
 
