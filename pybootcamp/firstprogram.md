@@ -40,6 +40,7 @@ working from the command line, run the file, for example:
 It should produce the output `15`. That was easy.
 
 What if we divide instead? Change the crucial line to:
+
 ```python
 z = x / y
 ```
