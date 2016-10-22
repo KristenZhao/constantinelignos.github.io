@@ -21,7 +21,7 @@ def median(nums):
     # If odd, just get the middle index
     if len(nums) % 2:
         # Use int division to round it downward to get the middle index
-        middle = len(nums) / 2
+        middle = len(nums) // 2
         return nums[middle]
     else:
         # Average the two middle points. These will be len / 2 and the
