@@ -27,7 +27,6 @@ To print something, just use `print`:
 simple arithmetic. Let's add two variables together and print the
 output. Make a new file, enter this script, and run it:
 
-
 ```python
 x = 7
 y = 8
@@ -43,10 +42,10 @@ It should produce the output `15`. That was easy.
 
 What if we divide instead? Change the crucial line to:
 
-
 ```python
 z = x / y
 ```
+
 Check out the documentation on [Python Numeric
 Types](http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex)
 for a full list of the arithmetic operators in Python.
@@ -63,7 +62,6 @@ the `for` loop. We'll use it to iterate over a `list`, a data type
 that we'll go over in more detail later. For now, think of a list as a
 variable-sized array of ordered items. To initialize a list, we use
 `[]` with commas to separate the items.
-
 
 ```python
 letters = ['a', 'b', 'c']
@@ -178,8 +176,10 @@ I'll call `test.py`:
 import sys
 print(sys.argv)
 ```
+
 We need to test this from the command line, not inside another program
 such as IDLE:
+
 ```bash
 $ python test.py a b c
 ['test.py', 'a', 'b', 'c']
@@ -255,6 +255,7 @@ number of lines in a file. It should take the name of a single file as
 a command line argument (which can be retrieved as `sys.argv[1]`),
 count the number of lines in it, and print that number at the end. For
 example:
+
 ```bash
 $ python countlines.py pp_ch1.txt
 111

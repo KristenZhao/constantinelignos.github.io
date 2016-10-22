@@ -24,7 +24,6 @@ analytics: pybootcamp
 
 For example, conisder the following `list` of strings:
 
-
 ```python
 lyrics = ['Her', 'name', 'is', 'Rio']
 ```
@@ -32,7 +31,6 @@ lyrics = ['Her', 'name', 'is', 'Rio']
 Each string itself is actually its own container type, although it is
 not a list. Lists are special in that you can modify their contents
 and the items in them do not need to be the same type:
-
 
 ```python
 lyrics[0] = 'His'
@@ -43,7 +41,6 @@ lyrics[3] = 7
 
 `len` returns the length of a sequence, which is the number of
 items in it:
-
 
 ```python
 >>> len(lyrics)
@@ -92,7 +89,6 @@ The `for` loop gives simple iteration over sequences. Read this as
 `items`.  We call `item` a _loop variable_, meaning it's the main
 variable that changes as the loop runs.
 
-
 ```python
 for item in items:
     print(item)
@@ -101,7 +97,6 @@ for item in items:
 If we need to do something with the index as well, `enumerate` can be
 used. "Each time the loop runs, set `item` equal to the next element
 in items and set `index` to the index of that item.
-
 
 ```python
 for index, item in enumerate(items):
@@ -116,7 +111,6 @@ them.
 You can add one item to a list by using `append`, or multiple by using
 `extend`:
 
-
 ```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
 >>> lyrics.append('and')
@@ -130,12 +124,10 @@ You can add one item to a list by using `append`, or multiple by using
 Note that these change this list in place but don't return
 anything. Don't make the mistake of writing something like:
 
-
 ```python
 # This is pointless, lyrics2 will be None
 lyrics2 = lyrics.append('and')
 ```
-
 
 # Maps
 
@@ -153,7 +145,6 @@ unlike a `list`, where to find an item you have to check each element.
 
 Curly braces (`{}`) are in the creation of dictionaries, while square
 braces (`[]`) are used for lookup, just like lists.
-
 
 ```python
 Creating a new empty dictionary
@@ -263,7 +254,6 @@ y
 However, they are _immutable_, so unlike a list you cannot change the
 contents of a string object.
 
-
 ```python
 >>> word[0] = "s"
 Traceback (most recent call last):
@@ -273,7 +263,6 @@ TypeError: 'str' object does not support item assignment
 
 Rather than modifying a string, you just can just replace it with
 another one:
-
 
 ```python
 >>> word = "sappy"
@@ -314,7 +303,6 @@ True
 You often want to print out strings nicely, as a part of normal
 operation or debugging. This is best accomplished by using the
 `format` method on a string.
-
 
 ```python
 >>> lyrics = ['Her', 'name', 'is', 'Rio']
@@ -366,7 +354,6 @@ As alluded to earlier, some types of data can be changed in-place
 while others cannot. The `tuple` is a type similar to a list but one
 that cannot be changed once it is created; it is _immutable_.
 
-
 ```python
 >>> words1 = ['the', 'dog']
 >>> words1[1] = 'cat'
@@ -396,7 +383,6 @@ this object affect anything else?". For example:
 As integers are immutable, at the beginning `x` and `y` refer to the
 same object but when `x` is incremented it points to a different
 object instead. However, note:
-
 
 ```python
 >>> x = ['a']

@@ -19,17 +19,13 @@ analytics: pybootcamp
 ![xkcd comic on Python](http://imgs.xkcd.com/comics/python.png)
 1. Python comes with "batteries included." There are lots of useful
 and powerful packages in the standard library.
-1. Whitespace is required, preventing hopelessly unreadable code
 1. Programs are short, clear, and concise
-1. You don’t have to use object-oriented programming when it isn’t appropriate
+1. Whitespace is required, preventing hopelessly unreadable code
 1. There’s one obvious way to do it
-1. Easy inheritance from built-in types
-1. A simple data model
 
 # Some challenges in dealing with Python
 
 1. The compiler will not stop you from writing nonsense
-1. The compiler will not stop you from writing code that almost makes
    sense but is actually wrong
 1. Some errors won't show up unless the actual line of code is run,
 meaning that you have no idea whether anything works until you test it.

@@ -150,7 +150,7 @@ As an exercise, you'll rewrite the expression for `gen_words` as a generator fun
 In one of the previous exercises, we built a dictionary mapping words
 to their frequencies from a file that looked like this:
 
-<pre>
+```
 69971 the
 36412 of
 28853 and
@@ -161,7 +161,7 @@ to their frequencies from a file that looked like this:
 10109 is
 9815 was
 9548 he
-</pre>
+```
 
 This can easily be written as a dictionary comprehension:
 
@@ -224,7 +224,7 @@ each word and its count. When run on the input files
 [pp_ch2_tokenized.txt](examples/pp_ch2_tokenized.txt),
 the output should look like the following:
 
-<pre>
+```
 $ python count_words.py pp_ch1_tokenized.txt pp_ch2_tokenized.txt
 54 you
 48 the
@@ -236,7 +236,7 @@ $ python count_words.py pp_ch1_tokenized.txt pp_ch2_tokenized.txt
 27 that
 27 it
 26 not
-</pre>
+```
 
 An example solution can be found in
 [count_words.py](examples/count_words.py).
@@ -250,7 +250,7 @@ new `Counter` where each count is divided by the total of all
 counts. Apply this function to the counts before printing them as
 above. The output should look like:
 
-<pre>
+```
 0.0328667072428 you
 0.0292148508825 the
 0.0286062081558 of
@@ -261,4 +261,4 @@ above. The output should look like:
 0.0164333536214 that
 0.0164333536214 it
 0.0158247108947 not
-</pre>
+```

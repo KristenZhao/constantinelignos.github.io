@@ -18,7 +18,6 @@ analytics: pybootcamp
 The previous example brought up the basic structure of a Python
 conditional. It looks like this:
 
-
 ```python
 def test(x):
     """Print whether the argument evaluates as True or False."""
