@@ -37,8 +37,8 @@ def main():
     for filename in filenames:
         emp = parse_file(target_dir, filename)
         employees[emp.id] = emp
-    for emp_id, emp in employees.items():
-        print '{}: {}'.format(emp_id, emp)
+    for emp_id, emp in list(employees.items()):
+        print('{}: {}'.format(emp_id, emp))
 
 
 if __name__ == "__main__":

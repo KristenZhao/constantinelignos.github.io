@@ -53,17 +53,17 @@ def main():
         concord = Concordance(args.file)
     # We'll get an IOError if the file cannot be opened
     except IOError:
-        print >> sys.stderr, "Couldn't open input file {!r}.".format(sys.argv[1])
+        print("Couldn't open input file {!r}.".format(sys.argv[1]), file=sys.stderr)
         sys.exit(1)
 
     # Look up the word
     try:
         word, freq, contexts = concord.lookup(args.word)
-        print "{} ({})".format(word, freq)
+        print("{} ({})".format(word, freq))
         for line in contexts:
-            print line
+            print(line)
     except ValueError:
-        print "The word {!r} was not found.".format(args.word)
+        print("The word {!r} was not found.".format(args.word))
 
 
 def clean_token(token):

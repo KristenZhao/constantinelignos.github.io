@@ -25,7 +25,7 @@ def count_words():
     token_generator = gen_tokens(filenames)
     word_freqs = count_tokens(token_generator)
     for word, count in word_freqs.most_common(10):
-        print count, word
+        print(count, word)
 
 
 if __name__ == "__main__":

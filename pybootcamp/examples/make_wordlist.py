@@ -15,7 +15,7 @@ def make_wordlist():
             counter[word] += 1
 
     for word, count in counter.most_common():
-        print count, word
+        print(count, word)
 
 
 if __name__ == "__main__":
