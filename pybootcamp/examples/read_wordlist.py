@@ -2,6 +2,7 @@
 """Read a wordlist and print information about it."""
 
 import sys
+from collections import Counter
 
 
 def load_wordlist(path):
@@ -15,14 +16,12 @@ def load_wordlist(path):
 
 def count_letters(word_counts):
     """Return letter counts from a dictionary of word counts."""
-    letter_counts = {}
-    for word, count in list(word_counts.items()):
+    counts = Counter()
+    for word, count in word_counts.items():
         for letter in word:
-            try:
-                letter_counts[letter] += count
-            except KeyError:
-                letter_counts[letter] = count
-    return letter_counts
+            counts[letter] += count
+
+    return counts
 
 
 def read_wordlist():
