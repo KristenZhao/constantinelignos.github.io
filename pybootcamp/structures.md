@@ -212,14 +212,18 @@ want have a dictionary from formal names to nicknames, where each name
 can have multiple nicknames. Also, let's assume that you want to read
 in a file that looks something like this:
 
-    Johnathan John
-    Johnathan Johnny
-    Johnathan Jack
+```
+Johnathan John
+Johnathan Johnny
+Johnathan Jack
+```
 
 What we want is a dictionary that looks like this, with string keys
 and list values:
 
-    {'Johnathan': ['John', 'Johnny', 'Jack']}
+```
+{'Johnathan': ['John', 'Johnny', 'Jack']}
+```
 
 We can accomplish this by using a `defaultdict`, a dictionary that
 comes with a default value for a key we haven't seen before. In this
