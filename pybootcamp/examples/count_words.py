@@ -5,6 +5,14 @@ import sys
 from collections import Counter
 
 
+def get_tokens(filenames):
+    """Return a list of all tokens in the specified files."""
+    return [token for  filename in filenames
+            for line in open(filename, "U")
+            for token in line.split()]
+
+
+# A more efficient way to implement get_tokens using a generator
 def gen_tokens(filenames):
     """Generate tokens from each file."""
     for filename in filenames:
@@ -14,16 +22,11 @@ def gen_tokens(filenames):
                 yield token
 
 
-def count_tokens(tokens):
-    """Return a counter for the given tokens."""
-    return Counter(tokens)
-
-
 def count_words():
     """Parse arguments and do the work."""
     filenames = sys.argv[1:]
-    token_generator = gen_tokens(filenames)
-    word_freqs = count_tokens(token_generator)
+    tokens = get_tokens(filenames)
+    word_freqs = Counter(tokens)
     for word, count in word_freqs.most_common(10):
         print(count, word)
 

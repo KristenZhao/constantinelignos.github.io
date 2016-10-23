@@ -143,7 +143,7 @@ def fib(n):
             f1 = result
 ```
 
-As an exercise, you'll rewrite the expression for `gen_words` as a generator function 
+As an exercise, you can rewrite the expression for `gen_words` as a generator function 
 
 ## Dictionary comprehensions
 
@@ -188,14 +188,8 @@ comprehension:
 
 ```python
 # Make a new dictionary with one added to every frequency
-word_freqs2 = {word: freq + 1 for word, freq in word_freqs.iteritems()}
+word_freqs2 = {word: freq + 1 for word, freq in word_freqs.items()}
 ```
-
-You'll noticed I used `iteritems` instead of the normal `items`. There
-are similar `iterkeys` and `itervalues` methods. Inside a
-comprehension, which tries to be as memory-efficient as possible, it's
-best to use these iterator forms. That said, you will see no
-difference at all between `items` and `iteritems` much of the time.
 
 # Exercises
 
@@ -214,8 +208,10 @@ It's easiest to think of this as writing a nested set of loops:
 
 1. An outer loop that loops over the filenames
 2. A middle loop that loops over the lines of each file
-3. An inner loop that loops over the words of each line and increments
-   their count
+3. An inner loop that loops over the words of each line
+
+Once you have the words corresponding to all of the files, you can
+just provide them to a `Counter` and it will create the counts for you. 
 
 To show that the counts are correct, you should call get the 10 most
 common words using the `most_common` method on the counter and print
