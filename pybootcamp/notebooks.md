@@ -15,7 +15,7 @@ analytics: pybootcamp
 
 # Sleep study
 
-This notebook gives more examples of plotting and analyzing data. The data are taken from a study examining reaction times under sleep-deprived conditions. Download here and open them in IPython (AKA Jupyter): [Full notebook](https://gist.githubusercontent.com/ConstantineLignos/ec0dcd267d897b5220c1/raw/b5d0c70037c38f517873a7eb922234aea7e56eac/Sleep%2520Study%2520Analysis.ipynb)
+This notebook gives more examples of plotting and analyzing data. The data are taken from a study examining reaction times under sleep-deprived conditions. Download here and open in IPython (AKA Jupyter): [Full notebook](https://gist.githubusercontent.com/ConstantineLignos/ec0dcd267d897b5220c1/raw/b5d0c70037c38f517873a7eb922234aea7e56eac/Sleep%2520Study%2520Analysis.ipynb) [Data](examples/sleep_study.csv]
 
 # Presidential ratings
 
