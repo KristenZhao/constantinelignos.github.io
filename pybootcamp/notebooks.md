@@ -13,14 +13,16 @@ analytics: pybootcamp
 1. TOC
 {:toc}
 
-# Presidential ratings
-
-These notebooks walk through a simple example of plotting and summarizing some
-presidential ratings data. You'll want to save these to your computer and open them in IPython (AKA Jupyter).
-
-1. [Loading up the data](https://gist.githubusercontent.com/ConstantineLignos/9ccf686efdcacd87d454/raw/172563fbc29a58a25da804300abb70e28baf55b4/Presidential%2520Ratings%2520Stub.ipynb)
-2. [Full notebook](https://gist.githubusercontent.com/ConstantineLignos/9ccf686efdcacd87d454/raw/172563fbc29a58a25da804300abb70e28baf55b4/Presidential%2520Ratings.ipynb)
-
 # Sleep study
 
-This notebook gives more examples of plotting and analyzing data. The data are taken from a study examining reaction times under sleep-deprived conditions. Download here: [Full notebook](https://gist.githubusercontent.com/ConstantineLignos/ec0dcd267d897b5220c1/raw/e25e152f257034e09cf386ad8c737728d0c2dc9c/Sleep%2520Study%2520Analysis.ipynb)
+This notebook gives more examples of plotting and analyzing data. The data are taken from a study examining reaction times under sleep-deprived conditions. Download here and open them in IPython (AKA Jupyter): [Full notebook](https://gist.githubusercontent.com/ConstantineLignos/ec0dcd267d897b5220c1/raw/b5d0c70037c38f517873a7eb922234aea7e56eac/Sleep%2520Study%2520Analysis.ipynb)
+
+# Presidential ratings
+
+This stub notebook provides some exercises to try out for basic data analysis:
+
+These notebooks walk through a simple example of plotting and summarizing some
+presidential ratings data.
+
+1. [Stub notebook](https://gist.githubusercontent.com/ConstantineLignos/9ccf686efdcacd87d454/raw/d662c6f1502dedce8a659016e0b2d986d3931a2a/Presidential%2520Ratings%2520Stub.ipynb)
+2. [Solutions](https://gist.githubusercontent.com/ConstantineLignos/9ccf686efdcacd87d454/raw/172563fbc29a58a25da804300abb70e28baf55b4/Presidential%2520Ratings.ipynb)
