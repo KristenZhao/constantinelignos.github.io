@@ -21,8 +21,16 @@ team on speech recognition and text-to-speech in cars, specifically on
 on
 [CommuteUX](http://research.microsoft.com/en-us/projects/CommuteUX/).
 
-I am committed to applying language technology to projects that
-benefit humankind. From September 2013 to May 2015, I worked at The
-Children's Hospital of Philadelphia as a post-doctoral fellow,
-developing models of how language is processed in the brain and
-applying it to autism research.
+I did my doctoral work at the University of Pennsylvania, working with
+[Mitch Marcus](http://www.cis.upenn.edu/~mitch/) and [Charles
+Yang](http://www.ling.upenn.edu/~ycharles/). My thesis work combined
+insights from unsupervised learning, language acquisition, and
+psycholinguistics to build models of how we learn and process words. I
+then applied some of the insights from this work as post-doctoral
+fellow at The Children's Hospital of Philadelphia, developing models
+of how language is processed in the brain and applying it to autism
+research.
+
+I continue to build language technology with a focus on how we can
+build effective and efficient systems by using insights from how
+humans learn, represent, and process language.
