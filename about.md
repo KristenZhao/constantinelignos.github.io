@@ -2,7 +2,7 @@
 layout: default
 title: About
 ---
-#About me
+# About me
 
 I graduated from Yale in 2006 with a B.A. in Computer Science and
 Psychology. As an undergraduate I performed research in human-robot

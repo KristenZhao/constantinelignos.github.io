@@ -2,7 +2,7 @@
 layout: default
 title: Posts
 ---
-#Posts
+# Posts
 
 <div class="titleblock">
 {% assign sortedpages = (site.pages | sort: 'title') %}
