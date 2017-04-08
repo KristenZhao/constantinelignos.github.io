@@ -24,9 +24,12 @@ analytics: pybootcamp
 1. [Odds and ends](odds-ends.html)
 1. [Exercises](exercises2.html)
 
+## Basic data analysis
+1. [Introductory notebooks](intro-notebooks.html)
+
 ## Examples
 1. [CSV](csv.html)
-1. [IPython notebooks](notebooks.html)
+1. [Introductory IPython notebooks](notebooks.html)
 
 ---
 
